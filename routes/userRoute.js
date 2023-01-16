@@ -13,7 +13,7 @@ router.post('/addquestions', verifyUser,testController.addQuestions);
 router.get('/getquestions', verifyUser,testController.getQuestions);
 router.get('/getattemptedtest', verifyUser,testController.getAttemptedTest);
 router.post('/addtest', verifyUser, testController.addTest);
-router.post('paymentstatus',verifyUser, userController.updateUser);
+router.post('/paymentstatus',verifyUser, userController.updateUser);
 // router.delete('/:userId', userController.deleteUser);
 
 module.exports = router;
