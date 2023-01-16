@@ -88,8 +88,8 @@ exports.getUser = async (req, res) => {
 exports.updateUser = async (req, res) => {
   try {
     const updatedUser = await User.findByIdAndUpdate(
-      req.params.userId,
-      { $set: { 'paymentStatus' : true} }
+      req.user._id,
+      { 'paymentStatus' : true} 
     );
     if (!updatedUser) {
       return res.status(400).send({ message: "Could not update user" });
