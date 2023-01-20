@@ -107,7 +107,7 @@ exports.updateUser = async (req, res) => {
 exports.verify = async (req, res) => {
   try {
     const updatedUser = await User.findByIdAndUpdate(
-      req.body._id,
+      req.params.id,
       {'verified' : true} 
     );
     if (!updatedUser) {
@@ -115,7 +115,7 @@ exports.verify = async (req, res) => {
     }
     return res
       .status(200)
-      .redirect('http://localhost:3000/emailverified')
+      .redirect('https://cceestudy.online/emailverified')
       // .send({ message: "Email verified successfully", updatedUser });
   } catch (error) {
     return res

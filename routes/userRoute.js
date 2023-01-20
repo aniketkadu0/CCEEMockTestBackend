@@ -14,7 +14,7 @@ router.get('/getquestions', verifyUser,testController.getQuestions);
 router.get('/getattemptedtest', verifyUser,testController.getAttemptedTest);
 router.post('/addtest', verifyUser, testController.addTest);
 router.post('/paymentstatus',verifyUser, userController.updateUser);
-router.post('/verify', userController.verify);
+router.get('/verify', userController.verify);
 
 module.exports = router;
 

@@ -14,7 +14,7 @@ async function mailer(req, res, next) {
   });
 
   await transporter.sendMail({
-    from: `"cceestudy.online" <admin@cceestudy.online>`,
+    from: `"Admin | cceestudy.online" <admin@cceestudy.online>`,
     to: req.user.email,
     subject: "Registered successfully in cceestudy.online!",
     html: `<div style="font-size: 16px;">
@@ -22,20 +22,14 @@ async function mailer(req, res, next) {
     <p><strong>Registered email : </strong>${req.user.email}</p>
     <p><strong>Password : </strong>${req.body.password}</p>
 
-    <p>Please click on below button to verify your email address</p>
-    <form action="http://localhost:8000/user/verify" method="post"> 
-      <input type="text" value=${req.user._id} name="_id" hidden>
-      <input style="width: 150px; 
-      height: 40px; font-size: 16px; color: white; 
-      background-color: #6600cc; border-radius: 5px; 
-      border: none;" type="submit" name="verify" value="Verify email">
-    </form>
+    <p>Please click on below linkn to verify your email address</p>
+    <a href="https://cceemocktest.online/user/verify?id=${req.user._id}">Verify email</a>
 
     <p>After verifying, sign in & proceed for payment by clicking on 
     "Pay now" button.</p>
     <p>Wish you all the best for the tests!</p>
     </div>
-    <div style="color: #6600cc; margin-top: 100px;">
+    <div style="color: #6600cc; margin-top: 50px;">
     <h3>Thanks & Regards,</h3>
     <h3>Admin</h3>
     <img src="https://cceestudy.online/images/book-reading.png"
