@@ -107,7 +107,7 @@ exports.updateUser = async (req, res) => {
 exports.verify = async (req, res) => {
   try {
     const updatedUser = await User.findByIdAndUpdate(
-      req.params.id,
+      req.query.id,
       {'verified' : true} 
     );
     if (!updatedUser) {

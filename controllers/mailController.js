@@ -29,6 +29,7 @@ async function mailer(req, res, next) {
     "Pay now" button.</p>
     <p>Wish you all the best for the tests!</p>
     </div>
+    
     <div style="color: #6600cc; margin-top: 50px;">
     <h3>Thanks & Regards,</h3>
     <h3>Admin</h3>
