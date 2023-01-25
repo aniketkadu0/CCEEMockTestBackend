@@ -1,3 +1,4 @@
+const data = require("./data")
 const Test = require("../models/testModel");
 const User = require("../models/userModel");
 
@@ -19,9 +20,11 @@ exports.addQuestions = async (req, res, next) => {
 
 exports.getQuestions = async (req, res) => {
   try {
-    const foundQuestions = await Test.findOne({
-      moduleName: req.query.moduleName,
-    });
+    console.log(req.query.moduleName)
+    const foundQuestions = data.filter((data) => data.moduleName === req.query.moduleName)
+    // await Test.findOne({
+    //   moduleName: req.query.moduleName,
+    // });
     res.send(foundQuestions);
   } catch (error) {
     return res.status(400).send({ error: "Unable to find quetions" });
