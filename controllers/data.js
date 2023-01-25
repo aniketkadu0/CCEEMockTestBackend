@@ -346,8 +346,8 @@ The total number of child processes created is _________`,
     questions : [
         {
             id : 1,
-            question : `Which of the following statements is/are true regarding JAVA? 
-                        A. Constants that cannot be changed are declared using the 'Static' keyword.
+            question : `Which of the following statements is/are true regarding JAVA? <br>
+                        A. Constants that cannot be changed are declared using the 'Static' keyword. <br>
                         B. A class can only inherit one class that can implement multiple interfaces.`,
             options : ["A is true", "B is true", "Both (A) and (B) are true", 
                         "Neither (A) nor (B) is true"],

@@ -20,7 +20,6 @@ exports.addQuestions = async (req, res, next) => {
 
 exports.getQuestions = async (req, res) => {
   try {
-    console.log(req.query.moduleName)
     const foundQuestions = data.filter((data) => data.moduleName === req.query.moduleName)
     // await Test.findOne({
     //   moduleName: req.query.moduleName,
