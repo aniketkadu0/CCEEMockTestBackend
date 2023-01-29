@@ -151,6 +151,7 @@ const createUserObj = async (req) => {
   return {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
+    centreName : req.body.centreName,
     email: req.body.email,
     password: bcrypt.hashSync(req.body.password, 10)
   };
