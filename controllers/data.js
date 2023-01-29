@@ -124,7 +124,7 @@ public class Test{
         },
         {
             id : 13,
-            question : `Consider the set of 5 processes whose arrival time and burst time are given below-
+            question : `Consider the set of 4 processes whose arrival time and burst time are given below-
                         <img class = 'mt-3' src='https://cceestudy.online/images/tests/fcfs problem.jpg' style='width : 100%;' />
                         If the CPU scheduling policy is FCFS, calculate the average waiting time and average turn around time.`,
             options : ["14.25, 8.75","10, 7","22.5, 12.5","8.7, 6.7"],
@@ -299,7 +299,7 @@ The total number of child processes created is _________`,
         {
             id : 35,
             question : `Consider the page reference string 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 3 with 4 page frames. 
-                        Find out the number of page faults using LRU (Lease recently used) Page Replacement Algorithm`,
+                        Find out the number of page faults using LRU (Lease recently used) Page Replacement Algorithm.`,
             options : ["10","8","6","7"],
             answer : "6"
         },
@@ -380,7 +380,7 @@ public class Program {
         },
         {
             id : 4,
-            question : `
+            question : `What will be the output of following snippet :
 <pre class="language-java"><code>
 public class Program {
     public static void main ( String[] args ) {
@@ -405,7 +405,7 @@ public class Program {
         },
         {
             id : 6,
-            question : "To access a protected variable or method of a Class outside the package, you need to ____ in Java.",
+            question : "To access a protected variable or method of a Class outside the package, you need to _____________ in Java.",
             options : ["Create an instance and call the protected variable or method", 
             "Create a Subclass by extending Class that have protected variable or method and call the same", 
             "Both A & B", 

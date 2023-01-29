@@ -22,7 +22,7 @@ async function mailer(req, res, next) {
     <p><strong>Registered email : </strong>${req.user.email}</p>
     <p><strong>Password : </strong>${req.body.password}</p>
 
-    <p>Please click on below linkn to verify your email address</p>
+    <p>Please click on below link to verify your email address</p>
     <a href="https://cceemocktest.online/user/verify?id=${req.user._id}">Verify email</a>
 
     <p>After verifying, sign in & proceed for payment by clicking on 
