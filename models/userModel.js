@@ -12,6 +12,10 @@ const userSchema = new mongoose.Schema(
             trim:true,
             required:true,
         },
+        centreName:{
+            type: String,
+            required: true,
+        },
         email:{
             type: String,
             required: true,
