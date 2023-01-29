@@ -927,9 +927,9 @@ public class SinglyLinkedList {
         {
             id : 8,
             question : `Consider the stack shown below: <br>
-           -------------------------------------------------------
-           |  25  |  60  |  34  |  7  |  9  |  54  |  76  |  81  |  <-- Top
-           -------------------------------------------------------  
+           ------------------------------------------------------- <br>
+           |  25  |  60  |  34  |  7  |  9  |  54  |  76  |  81  |  <-- Top <br>
+           -------------------------------------------------------  <br>
             After performing the following operations in sequence, which value will 
             be at the top of the stack ?
             pop, pop, push 55, pop, pop, push 12, push 48, pop, pop, pop`,
@@ -1678,24 +1678,9 @@ SELECT City_name FROM States INNER JOIN Cities WHERE State.State_id = Cities.Sta
         {
             id : 1,
             question : "Which of the following is the correct syntax for referring the external style sheet?",
-            options : [
-`<pre class="HTML"><code>
-<style src = example.css>
-</code></pre>`,
-`<pre class="HTML"><code>
-<style src = "example.css">
-</code></pre>`,
-`<pre class="HTML"><code>
-<stylesheet> example.css </stylesheet>
-</code></pre>`,
-`<pre class="HTML"><code>
-<link rel="stylesheet" type="text/css" href="example.css">
-</code></pre>`
-],
-            answer : 
-`<pre class="HTML"><code>
-<link rel="stylesheet" type="text/css" href="example.css">
-</code></pre>`
+            options : ["<style src = example.css>", `<style src = "example.css">`, "<stylesheet> example.css </stylesheet>",
+                       `<link rel="stylesheet" type="text/css" href="example.css">`],
+            answer : `<link rel="stylesheet" type="text/css" href="example.css">`
         },
         {
             id : 2,
@@ -1709,27 +1694,14 @@ SELECT City_name FROM States INNER JOIN Cities WHERE State.State_id = Cities.Sta
         {
             id : 3,
             question : "Which of the following HTML code will make an image clickable?",
-            options : [
-`<pre class="HTML"><code>
-<a href="https://www.cceestudy.com/">Home page</a>
-</code></pre>`,
-`<pre class="HTML"><code>
-<img src="https://www.cceestudy.com/logo.jpg">
-<a href="https://www.cceestudy.com/">Home page</a>
-</img>
-</code></pre>`,
-`<pre class="HTML"><code>
-<a href="https://www.cceestudy.com/">Home page</a>
-<img src="https://www.cceestudy.com/logo.jpg" />
-</code></pre>`,
-`<pre class="HTML"><code>
-<a href="https://www.cceestudy.com/"><img src="https://www.cceestudy.com/logo.jpg"></a>
-</code></pre>`
-            ],
-            answer : 
-`<pre class="HTML"><code>
-<a href="https://www.cceestudy.com/"><img src="https://www.cceestudy.com/logo.jpg"></a>
-</code></pre>`
+            options : [ `<a href="https://www.cceestudy.com/">Home page</a>`,
+                    `<img src="https://www.cceestudy.com/logo.jpg">
+                    <a href="https://www.cceestudy.com/">Home page</a>
+                    </img>`,
+                    `<a href="https://www.cceestudy.com/">Home page</a>
+                    <img src="https://www.cceestudy.com/logo.jpg" />`,
+                    `<a href="https://www.cceestudy.com/"><img src="https://www.cceestudy.com/logo.jpg"></a>`],
+            answer : `<a href="https://www.cceestudy.com/"><img src="https://www.cceestudy.com/logo.jpg"></a>`
         },
         {
             id : 4,
