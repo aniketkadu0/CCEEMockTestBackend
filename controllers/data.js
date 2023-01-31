@@ -2747,7 +2747,7 @@ public class MainApp {
             id : 2,
             question : `__________ Testing <br>
             i) Performed by end-users and also by testers and developers <br>
-            ii) Based on external expectations <br>,
+            ii) Based on external expectations <br>
             iii) Exhaustive and the least timeconsuming <br>
             iv) The internal workings need not be known`,
             options : ["Black-Box", "Grey-Box", "White-Box", "None of these"],
@@ -2805,7 +2805,7 @@ public class MainApp {
         {
             id : 10,
             question : `Match the following problems with their appropriate solutions: 
-            <img class = 'mt-3' src='https://cceestudy.online/images/tests/images1.jpg' style='width : 100%;' />`,
+            <img class = 'mt-3' src='https://cceestudy.online/images/tests/asdm.jpg' style='width : 100%;' />`,
             options : ["1-D, 2-E, 3-A, 4-C, 5-B", "1-D, 2-A, 3-E, 4-C, 5-B",
                     "1-E, 2-B, 3-D, 4-C, 5-A", "1-D, 2-C, 3-A, 4-B, 5-E"],
             answer : "1-D, 2-E, 3-A, 4-C, 5-B"
