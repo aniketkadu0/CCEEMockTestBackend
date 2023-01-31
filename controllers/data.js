@@ -1677,10 +1677,9 @@ SELECT City_name FROM States INNER JOIN Cities WHERE State.State_id = Cities.Sta
     questions : [
         {
             id : 1,
-            question : "Which of the following is the correct syntax for referring the external style sheet?",
-            options : ["<style src = example.css>", `<style src = "example.css">`, "<stylesheet> example.css </stylesheet>",
-                       `<link rel="stylesheet" type="text/css" href="example.css">`],
-            answer : `<link rel="stylesheet" type="text/css" href="example.css">`
+            question : "Which HTML tag is called the root element of an HTML document?",
+            options : ["<html>" , "<body>", "<title>", "<head>"],
+            answer : "<html>"
         },
         {
             id : 2,
@@ -1693,15 +1692,9 @@ SELECT City_name FROM States INNER JOIN Cities WHERE State.State_id = Cities.Sta
         },
         {
             id : 3,
-            question : "Which of the following HTML code will make an image clickable?",
-            options : [ `<a href="https://www.cceestudy.com/">Home page</a>`,
-                    `<img src="https://www.cceestudy.com/logo.jpg">
-                    <a href="https://www.cceestudy.com/">Home page</a>
-                    </img>`,
-                    `<a href="https://www.cceestudy.com/">Home page</a>
-                    <img src="https://www.cceestudy.com/logo.jpg" />`,
-                    `<a href="https://www.cceestudy.com/"><img src="https://www.cceestudy.com/logo.jpg"></a>`],
-            answer : `<a href="https://www.cceestudy.com/"><img src="https://www.cceestudy.com/logo.jpg"></a>`
+            question : "Which of the following are examples of block-level elements in HTML?",
+            options : ["<div>", "<p>", "<h1>", "All of the above"],
+            answer : "All of the above"
         },
         {
             id : 4,
@@ -1795,9 +1788,9 @@ p {
         },
         {
             id : 14,
-            question : "Which is the correct symbol to insert a comment in HTML?",
-            options : ["//", "/* ... */", "<!-- ... -->", "HTML doesn't support the comments"],
-            answer : "<!-- ... -->"
+            question : "Which attribute specifies the path to the image?",
+            options : ["href", "link", "src", "All of the above"],
+            answer : "src"
         },
         {
             id : 15,
@@ -1842,11 +1835,11 @@ import React from 'react';
 import ReactDOM from 'react-dom'/client; 
 const authenticate = false;
 function ComponentOne(){
-    return <h1> ComponentOne </h1>;
+    return <pre><h1> ComponentOne </h1></pre>;
 }
 
 function ComponentTwo(){
-    return <h1> ComponentTwo </h1>;
+    return <pre><h1> ComponentTwo </h1></pre>;
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -2035,7 +2028,7 @@ what response will be shown?`,
         {
             id : 40,
             question : "Which is the correct symbol to insert a comment in JSON?",
-            options : ["//", "/* ... */", "<!-- ... -->", "JSON doesn't support the comments"],
+            options : ["//", "/* ... */", "<pre><!-- ... --></pre>", "JSON doesn't support the comments"],
             answer : "JSON doesn't support the comments"
         }
     ]
@@ -2170,7 +2163,7 @@ scope="singleton">
             id : 13,
             question : "Which design pattern provides a single class which provides simplified methods required by client and delegates call to those methods?",
             options : ["Adapter pattern", "Builder pattern", "Facade pattern", "Prototype pattern"],
-            answer : ""
+            answer : "Facade pattern"
         },
         {
             id : 14,
@@ -2192,7 +2185,7 @@ scope="singleton">
         },
         {
             id : 16,
-            question : "Which is mandatory in <jsp:useBean /> tag?",
+            question : "Which is mandatory in <pre><jsp:useBean /></pre> tag?",
             options : ["id, class", "id, type", "type, property", "type,id"],
             answer : "id, class"
         },
@@ -2266,7 +2259,7 @@ public class UserService {
         {
             id : 21,
             question : "What temporarily redirects response to the browser?",
-            options : ["<jsp:forward>", "<%@directive%>", "response.sendRedirect(URL)", "response.setRedirect(URL)"],
+            options : ["<pre><jsp:forward></pre>", "<%@directive%>", "response.sendRedirect(URL)", "response.setRedirect(URL)"],
             answer : "response.sendRedirect(URL)"
         },
         {
@@ -2348,11 +2341,11 @@ public class MainApp {
     }
 }
 </code></pre>`,
-            options : [`<bean id="textEditor" class="TextEditor"><br><constructor-arg ref="spellChecker"/><br></bean><br><bean id="spellChecker" class="SpellChecker"><br></bean>` 
-            ,`<bean id="textEditor" class="online.cceestudy.TextEditor"><br><constructor-arg ref="spellChecker"/><br></bean><br><bean id="spellChecker" class="online.cceestudy.SpellChecker"><br></bean>`
-            ,`<bean id="textEditor" class="online.cceestudy.TextEditor"><br><constructor-arg ref="spell"/><br></bean><br><bean id="spellChecker" class="online.cceestudy.SpellChecker"><br></bean>`
-            ,`<bean id="textEditor" class="online.cceestudy.TextEditor"><br><constructor-arg ref="spellChecker"/><br></bean>`],
-            answer : `<bean id="textEditor" class="online.cceestudy.TextEditor"><br><constructor-arg ref="spellChecker"/><br></bean><br><bean id="spellChecker" class="online.cceestudy.SpellChecker"><br></bean>`
+            options : [`<pre><bean id="textEditor" class="TextEditor"><br><constructor-arg ref="spellChecker"/><br></bean><br><bean id="spellChecker" class="SpellChecker"><br></bean></pre>` 
+            ,`<pre><bean id="textEditor" class="online.cceestudy.TextEditor"><br><constructor-arg ref="spellChecker"/><br></bean><br><bean id="spellChecker" class="online.cceestudy.SpellChecker"><br></bean></pre>`
+            ,`<pre><bean id="textEditor" class="online.cceestudy.TextEditor"><br><constructor-arg ref="spell"/><br></bean><br><bean id="spellChecker" class="online.cceestudy.SpellChecker"><br></bean></pre>`
+            ,`<pre><bean id="textEditor" class="online.cceestudy.TextEditor"><br><constructor-arg ref="spellChecker"/><br></bean></pre>`],
+            answer : `<pre><bean id="textEditor" class="online.cceestudy.TextEditor"><br><constructor-arg ref="spellChecker"/><br></bean><br><bean id="spellChecker" class="online.cceestudy.SpellChecker"><br></bean></pre>`
         },
         {
             id : 29,
@@ -2714,16 +2707,16 @@ public class MainApp {
         {
             id : 2,
             question : `__________ Testing <br>
-            i) Performed by end-users and also by testers and developers
-            ii) Based on external expectations,
-            iii) Exhaustive and the least timeconsuming
+            i) Performed by end-users and also by testers and developers <br>
+            ii) Based on external expectations <br>,
+            iii) Exhaustive and the least timeconsuming <br>
             iv) The internal workings need not be known`,
             options : ["Black-Box", "Grey-Box", "White-Box", "None of these"],
             answer : "Black-Box"
         },
         {
             id : 3,
-            question : "In V model, Validation refers a process of evaluating a system after successfully completion to find out whether ___ and ___ are meet or not.",
+            question : "In V model, Validation refers a process of evaluating a system after successfully completion to find out whether __________ and __________ are meet or not.",
             options : ["Customer expectations, Requirements", "System development, Testing", 
             "Analysis, design", "None of the mentioned above"],
             answer : "Customer expectations, Requirements"
@@ -2859,7 +2852,7 @@ public class MainApp {
         },
         {
             id : 24,
-            question : "In WebDriver__________command can be used to enter values onto text boxes?",
+            question : "In WebDriver, __________ command can be used to enter values onto text boxes?",
             options : ["selenium.type()", "type()", `sendKeys("text")`, `driver.type("text")`],
             answer : ""
         },
@@ -2904,7 +2897,7 @@ public class MainApp {
         },
         {
             id : 31,
-            question : "Scrum development teams consist of ____.",
+            question : "Scrum development teams consist of ____________.",
             options : ["Developers", "Quality assurance specialists", "Scrum Masters", "All of the above"],
             answer : "All of the above"
         },
@@ -2979,12 +2972,5 @@ public class MainApp {
 
 
 {/* <img class = 'mt-3' src='https://cceestudy.online/images/tests/images1.jpg' style='width : 100%;' /> */}
-
-let abc = {
-    id : 2,
-    question : ``,
-    options : [],
-    answer : ""
-}
 
 module.exports = data
