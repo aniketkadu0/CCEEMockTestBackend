@@ -1678,8 +1678,8 @@ SELECT City_name FROM States INNER JOIN Cities WHERE State.State_id = Cities.Sta
         {
             id : 1,
             question : "Which HTML tag is called the root element of an HTML document?",
-            options : ["<html>" , "<body>", "<title>", "<head>"],
-            answer : "<html>"
+            options : ["<xmp><html></xmp>" , "<xmp><body></xmp>", "<xmp><title></xmp>", "<xmp><head></xmp>"],
+            answer : "<xmp><html></xmp>"
         },
         {
             id : 2,
@@ -1693,7 +1693,7 @@ SELECT City_name FROM States INNER JOIN Cities WHERE State.State_id = Cities.Sta
         {
             id : 3,
             question : "Which of the following are examples of block-level elements in HTML?",
-            options : ["<div>", "<p>", "<h1>", "All of the above"],
+            options : ["<xmp><div></xmp>", "<xmp><p></xmp>", "<xmp><h1></xmp>", "All of the above"],
             answer : "All of the above"
         },
         {
@@ -1800,7 +1800,8 @@ p {
         },
         {
             id : 16,
-            question : `<pre class="JavaScript"><code>
+            question : `What will be the output of below javaScript code: 
+<pre class="JavaScript"><code>
 const numbers = [ 20, 21, 22 ];
 const newNumbers = [ ...numbers, 5 ]
 console.log(newNumbers)
@@ -1835,11 +1836,11 @@ import React from 'react';
 import ReactDOM from 'react-dom'/client; 
 const authenticate = false;
 function ComponentOne(){
-    return <pre><h1> ComponentOne </h1></pre>;
+    return <xmp><h1> ComponentOne </h1></xmp>;
 }
 
 function ComponentTwo(){
-    return <pre><h1> ComponentTwo </h1></pre>;
+    return <xmp><h1> ComponentTwo </h1></xmp>;
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -2027,9 +2028,9 @@ what response will be shown?`,
         },
         {
             id : 40,
-            question : "Which is the correct symbol to insert a comment in JSON?",
-            options : ["//", "/* ... */", "<pre><!-- ... --></pre>", "JSON doesn't support the comments"],
-            answer : "JSON doesn't support the comments"
+            question : "Which is the correct symbol to insert a comment in HTML?",
+            options : ["//", "/* ... */", "<pre><xmp><!-- ... --></xmp></pre>", "// ... //"],
+            answer : "<pre><xmp><!-- ... --></xmp></pre>"
         }
     ]
 },
@@ -2059,7 +2060,7 @@ what response will be shown?`,
         },
         {
             id : 4,
-            question : `What will be the output if we run MainApp.java:
+            question : `What will be the output if we run MainApp.java: <br>
 mainApp.java
 <pre class="Java"><code>
 import org.springframework.context.ApplicationContext;
@@ -2094,9 +2095,11 @@ public class MainApp {
 beans.xml
 
 <pre class="XML"><code>
+<xmp>
 <bean id="helloWorld" class="com.tutorialspoint.HelloWorld"
 scope="singleton">
 </bean>
+</xmp>
 </code></pre>`,
             options : ["I'm object B <br> I'm object B", "I'm object A <br> I'm object B", 
             "I'm object B <br> I'm object A", "I'm object A <br> I'm object A"],
@@ -2185,7 +2188,7 @@ scope="singleton">
         },
         {
             id : 16,
-            question : "Which is mandatory in <pre><jsp:useBean /></pre> tag?",
+            question : "Which is mandatory in <xmp><jsp:useBean /></xmp> tag?",
             options : ["id, class", "id, type", "type, property", "type,id"],
             answer : "id, class"
         },
@@ -2259,7 +2262,7 @@ public class UserService {
         {
             id : 21,
             question : "What temporarily redirects response to the browser?",
-            options : ["<pre><jsp:forward></pre>", "<%@directive%>", "response.sendRedirect(URL)", "response.setRedirect(URL)"],
+            options : ["<xmp><jsp:forward></xmp>", "<%@directive%>", "response.sendRedirect(URL)", "response.setRedirect(URL)"],
             answer : "response.sendRedirect(URL)"
         },
         {
@@ -2341,11 +2344,47 @@ public class MainApp {
     }
 }
 </code></pre>`,
-            options : [`<pre><bean id="textEditor" class="TextEditor"><br><constructor-arg ref="spellChecker"/><br></bean><br><bean id="spellChecker" class="SpellChecker"><br></bean></pre>` 
-            ,`<pre><bean id="textEditor" class="online.cceestudy.TextEditor"><br><constructor-arg ref="spellChecker"/><br></bean><br><bean id="spellChecker" class="online.cceestudy.SpellChecker"><br></bean></pre>`
-            ,`<pre><bean id="textEditor" class="online.cceestudy.TextEditor"><br><constructor-arg ref="spell"/><br></bean><br><bean id="spellChecker" class="online.cceestudy.SpellChecker"><br></bean></pre>`
-            ,`<pre><bean id="textEditor" class="online.cceestudy.TextEditor"><br><constructor-arg ref="spellChecker"/><br></bean></pre>`],
-            answer : `<pre><bean id="textEditor" class="online.cceestudy.TextEditor"><br><constructor-arg ref="spellChecker"/><br></bean><br><bean id="spellChecker" class="online.cceestudy.SpellChecker"><br></bean></pre>`
+            options : [`<pre class="XML"><code>
+<xmp>
+<bean id="textEditor" class="TextEditor"><br><constructor-arg ref="spellChecker"/>
+</bean>
+<bean id="spellChecker" class="SpellChecker"></bean>
+</xmp>
+</code></pre>` 
+            ,`<pre class="XML"><code>
+<xmp>
+<bean id="textEditor" class="online.cceestudy.TextEditor">
+<constructor-arg ref="spellChecker"/>
+</bean>
+<bean id="spellChecker" class="online.cceestudy.SpellChecker">
+</bean>
+</xmp>
+</code></pre>`
+            ,`<pre class="XML"><code>
+<xmp>
+<bean id="textEditor" class="online.cceestudy.TextEditor">
+<constructor-arg ref="spell"/>
+</bean>
+<bean id="spellChecker" class="online.cceestudy.SpellChecker">
+</bean>
+</xmp>
+</code></pre>`
+            ,`<pre class="XML"><code>
+<xmp>
+<bean id="textEditor" class="online.cceestudy.TextEditor">
+<constructor-arg ref="spellChecker"/>
+</bean>
+</xmp>
+</code></pre>`],
+            answer : `<pre class="XML"><code>
+<xmp>
+<bean id="textEditor" class="online.cceestudy.TextEditor">
+<constructor-arg ref="spellChecker"/>
+</bean>
+<bean id="spellChecker" class="online.cceestudy.SpellChecker">
+</bean>
+</xmp>
+</code></pre>`
         },
         {
             id : 29,
