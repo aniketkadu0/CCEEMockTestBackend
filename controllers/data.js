@@ -1977,85 +1977,10 @@ asyncFunc();
         },
         {
             id : 34,
-            question : `Which is the correct code of functional component in ReactJs application to create below 
-            button which increase the counter value by 1?
-            <h5>1</h5>
-            <button className='btn btn-primary'>Click</button>`,
-            options : [
-`<pre class="JavaScript"><code>
-import React from "react";
-import { useState } from 'react';
-
-export default function Counter() {
-    
-    const[count , setCount] = useState(1);
-
-    return (
-        <div>
-        <h5>{count}</h5>
-        <button className='btn btn-primary' onClick = {()=> setCount(count+1);}>Click</button>
-        </div>
-    );
-}
-</code></pre>`,
-`<pre class="JavaScript"><code>
-import React from "react";
-import { useState } from 'react';
-
-export default function Counter() {
-    
-    const[count , setCount] = useState(1);
-
-    return (
-        <h5>{count}</h5>
-        <button className='btn btn-primary' onClick = {()=> setCount(count+1);}>Click</button>
-    );
-}
-</code></pre>`,
-`<pre class="JavaScript"><code>
-import React from "react";
-
-export default function Counter() {
-    return (
-        <div>
-        <h5>{count}</h5>
-        <button className='btn btn-primary' onClick = {count++}>Click</button>
-        </div>
-    );
-}
-</code></pre>`,
-`<pre class="JavaScript"><code>
-import React from "react";
-
-export default function Counter() {
-    
-    const[count , setCount] = useState(1);
-
-    return (
-        <div>
-        <h5>{count}</h5>
-        <button className='btn btn-primary' onClick = {()=> setCount(count+1);}>Click</button>
-        </div>
-    );
-}
-</code></pre>`],
-            answer : 
-`<pre class="JavaScript"><code>
-import React from "react";
-import { useState } from 'react';
-
-export default function Counter() {
-    
-    const[count , setCount] = useState(1);
-
-    return (
-        <div>
-        <h5>{count}</h5>
-        <button className='btn btn-primary' onClick = {()=> setCount(count+1);}>Click</button>
-        </div>
-    );
-}
-</code></pre>`
+            question : "Which is the correct arrow function to add two numbers?",
+            options : ["add = (a,b) => a+b;", "add = (a,b) => return a+b;", 
+            "add = (a,b) => { return a+b;}", "both second and third option"],
+            answer : "both second and third option"
         },
         {
             id : 35,
@@ -2120,243 +2045,414 @@ what response will be shown?`,
     questions : [
         {
             id : 1,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "@SpringBootApplication is a combination of three annotations ________",
+            options : ["@ComponentScan, @ResponseBody and @Controller", 
+            "@Autowired, @Component and @Bean", 
+            "@Controller, @Service and @Repository", 
+            "@EnableAutoConfiguration, @ComponentScan and @Configuration"],
+            answer : "@EnableAutoConfiguration, @ComponentScan and @Configuration"
         },
         {
             id : 2,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which of the following is not a J2EE client?",
+            options : ["Web applications", "Applets", "Applets", "JSP"],
+            answer : "JSP"
         },
         {
             id : 3,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "The __________ is responsible to instantiate, configure and assemble the objects.",
+            options : ["Component", "Bean", "Class", "IoC container"],
+            answer : "IoC container"
         },
         {
             id : 4,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : `What will be the output if we run MainApp.java:
+mainApp.java
+<pre class="Java"><code>
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+class HelloWorld {
+    private String message;
+    public void setMessage(String message){
+        this.message = message;
+    }
+    public void getMessage(){
+        System.out.println("Your Message : " + message);
+    }
+}
+
+public class MainApp {
+    public static void main(String[] args) {
+        ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+
+        HelloWorld objA = (HelloWorld) context.getBean("helloWorld");
+        objA.setMessage("I'm object A");
+
+        HelloWorld objB = (HelloWorld) context.getBean("helloWorld");
+        objB.setMessage("I'm object B");
+
+        objA.getMessage();
+        objB.getMessage();
+    }
+}
+</code></pre>
+
+beans.xml
+
+<pre class="XML"><code>
+<bean id="helloWorld" class="com.tutorialspoint.HelloWorld"
+scope="singleton">
+</bean>
+</code></pre>`,
+            options : ["I'm object B <br> I'm object B", "I'm object A <br> I'm object B", 
+            "I'm object B <br> I'm object A", "I'm object A <br> I'm object A"],
+            answer : "I'm object B <br> I'm object B"
         },
         {
             id : 5,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which of the following statements is true?",
+            options : ["BeanFactory implements ApplicationContext", 
+            "BeanFactory extends ApplicationContext", 
+            "ApplicationContext extends BeanFactory", 
+            "ApplicationContext implements BeanFactory"],
+            answer : "ApplicationContext extends BeanFactory"
         },
         {
             id : 6,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which of the following is not a feature of Beans?",
+            options : ["Introspection", "Events", "Persistence", "Serialization"],
+            answer : "Serialization"
         },
         {
             id : 7,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "What is Spring MVC framework?",
+            options : ["Spring MVC framework is Model-Value-Class architecture and used to bind model data with values.",
+            "The Spring web MVC framework provides model-view-controller architecture and ready components that can be used to develop flexible and loosely coupled web applications.", 
+            "Spring MVC framework is used for Transaction management for Web Applications.", 
+            "Spring MVC framework is used for AOP for Web Applications."],
+            answer : "The Spring web MVC framework provides model-view-controller architecture and ready components that can be used to develop flexible and loosely coupled web applications."
         },
         {
             id : 8,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which of the following is used to rollback a JDBC transaction?",
+            options : ["rollback()", "rollforward()", "deleteTransaction()", "RemoveTransaction()"],
+            answer : "rollback()"
         },
         {
             id : 9,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Servlet are used to program which component in a web application?",
+            options : ["client", "server", "tomcat", "applet"],
+            answer : "server"
         },
         {
             id : 10,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "What POM stands for?",
+            options : ["Project Object Mode", "Project Object Model", "Project Objective Mode", "Project Objective Model"],
+            answer : "Project Object Model"
         },
         {
             id : 11,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "What is the correct syntax for annotation wiring?",
+            options : ["<annotation-context:config /> to bean configuration.", 
+            "<annotation-config /> to bean configuration.", 
+            "<annotation-context-config /> to bean configuration.", 
+            "<context:annotaion-config /> to bean configuration."],
+            answer : "<context:annotaion-config /> to bean configuration."
         },
         {
             id : 12,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "How are java web applications packaged?",
+            options : ["jar", "war", "zip", "both jar and war"],
+            answer : "both jar and war"
         },
         {
             id : 13,
-            question : "",
-            options : ["", "", "", ""],
+            question : "Which design pattern provides a single class which provides simplified methods required by client and delegates call to those methods?",
+            options : ["Adapter pattern", "Builder pattern", "Facade pattern", "Prototype pattern"],
             answer : ""
         },
         {
             id : 14,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which of the following is correct about messaging in RESTful web services?",
+            options : ["A client sends a message in form of a HTTP Request and server responds in form of a HTTP Response.", 
+            "These messages contain message data and metadata i.e. information about message itself.", 
+            "Both of the above", 
+            "None of the above."],
+            answer : "Both of the above"
         },
         {
             id : 15,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "@Component annotation on class indicates",
+            options : ["that a bean should be created for the class", 
+            "that a bean should not be created for the class", 
+            "that autowiring should be enabled for the class", 
+            "that autowiring should not be enabled for the class"],
+            answer : "that a bean should be created for the class"
         },
         {
             id : 16,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which is mandatory in <jsp:useBean /> tag?",
+            options : ["id, class", "id, type", "type, property", "type,id"],
+            answer : "id, class"
         },
         {
             id : 17,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Sessionfactory can manage contextual sessions for you and allows you to retrieve them by the :-",
+            options : ["getSession() method", "getCurrent() method", "getCurrentSession() method", "none of the mentioned"],
+            answer : "getCurrentSession() method"
         },
         {
             id : 18,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "The classes in the _________ directory must be available for the “Classloader” of the application?",
+            options : ["/root/lib/classes/", "/root/classes/", "/WEB-INF/lib/classes/", "/WEB-INF/classes/"],
+            answer : "/WEB-INF/classes/"
         },
         {
             id : 19,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "What is bean in Spring?",
+            options : ["A component", "An Object", "A class", "A container"],
+            answer : "An Object"
         },
         {
             id : 20,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : `find out correct annotations on mentioned letters A,B,C & D in below classes defined in SpringBoot Application:
+<pre class="Java"><code>
+// A
+public class Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+}
+-------------------------------
+// B
+public class User {
+	
+	@Id
+	private int userId;
+	private String firstName;
+	private String lastName;
+
+	//constructors, getters & setters method 
+}
+-------------------------------
+// C
+public class UserController {
+	
+	// D
+	UserService userService;
+	
+	@GetMapping("/getuser")
+	User getUser(){
+		return userService.getUser(); 
+	}
+}
+-------------------------------
+@Service
+public class UserService {
+
+	User getUser() {
+		return new User(1,"abc","def");
+	}
+}
+</code></pre>`,
+            options : ["@Bean, @Entity, @RestController, @Component", 
+            "@Controller, @Component, @Service, @Autowired", 
+            "@SpringBootApplication, @Entity, @RestController, @Autowired", 
+            "@Spring, @Required, @RestController, @Autowired"],
+            answer : "@SpringBootApplication, @Entity, @RestController, @Autowired"
         },
         {
             id : 21,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "What temporarily redirects response to the browser?",
+            options : ["<jsp:forward>", "<%@directive%>", "response.sendRedirect(URL)", "response.setRedirect(URL)"],
+            answer : "response.sendRedirect(URL)"
         },
         {
             id : 22,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Once the hibernate session is closed, in which state the object remains?",
+            options : ["detached", "transient", "persistent", "garbage collector"],
+            answer : "detached"
         },
         {
             id : 23,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "_________ annotation maps the HttpRequest body to a transfer or domain object, enabling automatic deserialization of the inbound HttpRequest body onto a Java object.",
+            options : ["@RequestParams", "@RequestBody", "@RequestMapping", "@Body"],
+            answer : "@RequestBody"
         },
         {
             id : 24,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which element of hbm.xml automatically generate the primary key values?",
+            options : ["id", "generator", "primaryKey", "None of the above"],
+            answer : "generator"
         },
         {
             id : 25,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which file is used to specify the packaging cycle?",
+            options : ["build.xml", "pom.xml", "dependency.xml", "version.xml"],
+            answer : "build.xml"
         },
         {
             id : 26,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which of the following method is used to perform DML statements in JDBC?",
+            options : ["executeResult()", "executeQuery()", "executeUpdate()", "execute()"],
+            answer : "executeUpdate()"
         },
         {
             id : 27,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which of the following is true about 'build' Maven life cycle?",
+            options : ["It cleans up artifacts created by prior builds.", "This is used to build the application.", 
+            "This generates site documentation for the project.", "None of the above."],
+            answer : "This is used to build the application."
         },
         {
             id : 28,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : `Which is the correct way of Constructor-based Dependency Injection for below code:
+<pre class="Java"><code>
+package online.cceestudy;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+class TextEditor {
+
+    private SpellChecker spellChecker;
+
+    public TextEditor(SpellChecker spellChecker) {
+        System.out.println("Inside TextEditor constructor." );
+        this.spellChecker = spellChecker;
+    }
+
+    public void spellCheck() {
+        spellChecker.checkSpelling();
+    }
+}
+
+class SpellChecker {
+
+    public SpellChecker(){
+        System.out.println("Inside SpellChecker constructor." );
+    }
+
+    public void checkSpelling() {
+        System.out.println("Inside checkSpelling." );
+    }
+}
+
+public class MainApp {
+    public static void main(String[] args) {
+        ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+        TextEditor te = (TextEditor) context.getBean("textEditor");
+        te.spellCheck();
+    }
+}
+</code></pre>`,
+            options : [`<bean id="textEditor" class="TextEditor"><br><constructor-arg ref="spellChecker"/><br></bean><br><bean id="spellChecker" class="SpellChecker"><br></bean>` 
+            ,`<bean id="textEditor" class="online.cceestudy.TextEditor"><br><constructor-arg ref="spellChecker"/><br></bean><br><bean id="spellChecker" class="online.cceestudy.SpellChecker"><br></bean>`
+            ,`<bean id="textEditor" class="online.cceestudy.TextEditor"><br><constructor-arg ref="spell"/><br></bean><br><bean id="spellChecker" class="online.cceestudy.SpellChecker"><br></bean>`
+            ,`<bean id="textEditor" class="online.cceestudy.TextEditor"><br><constructor-arg ref="spellChecker"/><br></bean>`],
+            answer : `<bean id="textEditor" class="online.cceestudy.TextEditor"><br><constructor-arg ref="spellChecker"/><br></bean><br><bean id="spellChecker" class="online.cceestudy.SpellChecker"><br></bean>`
         },
         {
             id : 29,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which one of the following annotations is not used in Hibernate?",
+            options : ["@Entity", "@Column", "@Basic", "@Query"],
+            answer : "@Query"
         },
         {
             id : 30,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Why use Request Dispatcher to forward a request to another resource, instead of using a sendRedirect?",
+            options : ["Redirects are no longer supported in the current servlet API", 
+            "Redirects are not a cross-platform portable mechanism", 
+            "The RequestDispatcher does not use the reflection API", 
+            "The RequestDispatcher does not require a rounf trip to the client, and thus is more efficient and allows ther server to maintain request state"],
+            answer : "The RequestDispatcher does not require a rounf trip to the client, and thus is more efficient and allows ther server to maintain request state"
         },
         {
             id : 31,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which of the following statements about the fetch modes in Entity beans is FALSE?",
+            options : ["There are two fetch modes: EAGER and LAZY", "The default fetching mode for a field in an Entity bean annotated by @Basic is LAZY", 
+            "The default fetching mode for a field in an Entity bean annotated by @Basic is LAZY", 
+            "Lob annotation does not have a default fetch mode"],
+            answer : "The default fetching mode for a field in an Entity bean annotated by @OneToMany is LAZY"
         },
         {
             id : 32,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "What is the storage capacity of single cookie?",
+            options : ["2048 MB", "2048 bytes", "4095 bytes", "4095 MB"],
+            answer : "4095 bytes"
         },
         {
             id : 33,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Any client request to access resources in the WEb-INF/ directory must be returned with",
+            options : ["BAD_REQUEST", "SC_NOT_FOUND", "SC_INTERNAL_SERVER_ERROR", "ESC_BAD_REQUEST"],
+            answer : "SC_NOT_FOUND"
         },
         {
             id : 34,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which option is true about session scope?",
+            options : ["Objects are accessible only from the page in which they are created", 
+            "Objects are accessible only from the pages which are in same session", 
+            "Objects are accessible only from the pages which are processing the same request", 
+            "Objects are accessible only from the pages which reside in same application"],
+            answer : "Objects are accessible only from the pages which are in same session"
         },
         {
             id : 35,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "When the JPA Entities will become detached?",
+            options : ["When the transaction (in transaction-scoped persistence context) commits, entities managed by the persistence context become detached.", 
+            "If an application-managed persistence context is closed, all managed entities become detached.", 
+            "Using a clear method", 
+            "All of these"],
+            answer : "Using a clear method"
         },
         {
             id : 36,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which of the following statements are correct about the status of the Http response?",
+            options : ["HTTP status codes in the 500 to 599 range indicate that the error is related to the client", 
+            "HTTP status codes in the 400 to 499 range indicate that the error is related to the server", 
+            "HTTP status codes in the 300 to 399 range are informational messages.", 
+            "HTTP status codes in the 200 to 299 range means that the client's request was successful."],
+            answer : "HTTP status codes in the 200 to 299 range means that the client's request was successful."
         },
         {
             id : 37,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : `What is the correct sequence to create a database connection? <br>
+            i. Import JDBC packages. <br>
+            ii. Open a connection to the database. <br>
+            iii. Load and register the JDBC driver. <br>
+            iv. Execute the statement object and return a query resultset. <br>
+            v. Create a statement object to perform a query. <br>
+            vi. Close the resultset and statement objects. <br>
+            vii. Process the resultset. <br>
+            viii. Close the connection.`,
+            options : ["i, ii, iii, v, iv, vii, viii, vi", "i, iii, ii, v, iv, vii, vi, viii", 
+            "ii, i, iii, iv, viii, vii, v, vi", "i, iii, ii, iv, v, vi, vii, viii"],
+            answer : "i, iii, ii, v, iv, vii, vi, viii"
         },
         {
             id : 38,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "What are the advantage of Hibernate?",
+            options : ["Hibernate takes care of mapping Java classes to database tables using XML files and without writing any line of code.", 
+            "Provides simple APIs for storing and retrieving Java objects directly to and from the database.", 
+            "Minimizes database access with smart fetching strategies.", "All of the above"],
+            answer : "All of the above"
         },
         {
             id : 39,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which of the following is true about persistent state of a persistent entity?",
+            options : ["You can make a transient instance persistent by associating it with a Session.", 
+            "A persistent instance has a representation in the database.", 
+            "A persistent instance has an identifier value.", 
+            "All of the above."],
+            answer : "All of the above."
         },
         {
             id : 40,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "What are the types of IOC Containers in Spring:",
+            options : ["Bean Factory", "ApplicationContext", "Both of the above", "None of these"],
+            answer : "Both of the above"
         }
     ]
 },
@@ -2610,243 +2706,272 @@ what response will be shown?`,
     questions : [
         {
             id : 1,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Agile Software Development is based on",
+            options : ["Incremental Development", "Iterative Development", 
+            "Both of the above", "Waterfall Model"],
+            answer : "Both of the above"
         },
         {
             id : 2,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : `__________ Testing <br>
+            i) Performed by end-users and also by testers and developers
+            ii) Based on external expectations,
+            iii) Exhaustive and the least timeconsuming
+            iv) The internal workings need not be known`,
+            options : ["Black-Box", "Grey-Box", "White-Box", "None of these"],
+            answer : "Black-Box"
         },
         {
             id : 3,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "In V model, Validation refers a process of evaluating a system after successfully completion to find out whether ___ and ___ are meet or not.",
+            options : ["Customer expectations, Requirements", "System development, Testing", 
+            "Analysis, design", "None of the mentioned above"],
+            answer : "Customer expectations, Requirements"
         },
         {
             id : 4,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which of the following type of virtualization is also characteristic of cloud computing?",
+            options : ["Storage", "Application", "CPU", "All of the mentioned"],
+            answer : "All of the mentioned"
         },
         {
             id : 5,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "A _________ keeps track of the contributions of the developers working as a team on the projects.",
+            options : ["CVS", "DVF", "VCS", "LFS"],
+            answer : "VCS"
         },
         {
             id : 6,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "What is the correct sequence of stages of waterfall model?",
+            options : ["Implementation --> Design --> Requirement Specification --> Verification and Testing --> Deployment --> Maintenance", 
+            "Implementation --> Design --> Requirement Specification --> Verification and Testing --> Deployment --> Maintenance", 
+            "Requirement Specification --> Design --> Implementation --> Verification and Testing --> Deployment --> Maintenance", 
+            "Requirement Specification --> Design --> Deployment --> Maintenance --> Implementation --> Verification and Testing"],
+            answer : "Requirement Specification --> Design --> Implementation --> Verification and Testing --> Deployment --> Maintenance"
         },
         {
             id : 7,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "The files that can be committed are always present in git ",
+            options : ["working directory", "staging area", "unstaged area", "Anywhere, there is no barrier"],
+            answer : "staging area"
         },
         {
             id : 8,
-            question : "",
-            options : ["", "", "", ""],
+            question : "__________ is a tool for automating testing web applications & Interacts directly with the browser and uses the browser's engine to control it.",
+            options : ["Selenuim", "WebDriver", "jUnit", "JIRA"],
             answer : ""
         },
         {
             id : 9,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Under which condition the developers should use microservices?",
+            options : ["When they want to develop apps for mobile phones that run quickly", 
+            "When they need to create large, enterprise-level applications that are subject to frequent changes", 
+            "When they want to develop scientific test equipment applications", 
+            "None of the above"],
+            answer : "When they need to create large, enterprise-level applications that are subject to frequent changes"
         },
         {
             id : 10,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : `Match the following problems with their appropriate solutions: 
+            <img class = 'mt-3' src='https://cceestudy.online/images/tests/images1.jpg' style='width : 100%;' />`,
+            options : ["1-D, 2-E, 3-A, 4-C, 5-B", "1-D, 2-A, 3-E, 4-C, 5-B",
+                    "1-E, 2-B, 3-D, 4-C, 5-A", "1-D, 2-C, 3-A, 4-B, 5-E"],
+            answer : "1-D, 2-E, 3-A, 4-C, 5-B"
         },
         {
             id : 11,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "___________, also known as K8s, is an open-source orchestartion system for automating deployment, scaling, and management of contanerized applications.",
+            options : ["Atlassian Jira", "docker swarm", "Kubernetes", "GitHub"],
+            answer : "Kubernetes"
         },
         {
             id : 12,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "The intent of ___________ is to ensure that a change, such as a bug fix should not result in another fault being uncovered in the application?",
+            options : ["functional testing", "regression testing", "integration testing", "unit testing"],
+            answer : "regression testing"
         },
         {
             id : 13,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which term defines the process of project compliance with policies and procedures?",
+            options : ["Quality control", "Quality assurances", "Quality audits", "Quality control management"],
+            answer : "Quality control management"
         },
         {
             id : 14,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which command creates a copy of an existing git repository.",
+            options : ["git copy", "git clone", "git replace", "git move"],
+            answer : "git clone"
         },
         {
             id : 15,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : `In Agile product development, A __________ is a short (ideally two to 4 week) period 
+            in which a development team implements and delivers functionality by completing stories.`,
+            options : ["Story", "Task", "Event", "Sprint"],
+            answer : "Sprint"
         },
         {
             id : 16,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which of the following is not included in SRS?",
+            options : ["Performance", "Functionality", "Design solutions", "External interfaces"],
+            answer : "Design solutions"
         },
         {
             id : 17,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "_________ provides complete isolation from the host operating system and the other Virtual Machines (VMs), so it is fully secure.",
+            options : ["Virtualization", "Containerization", "Security", "Cloud"],
+            answer : "Virtualization"
         },
         {
             id : 18,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "How many buckets can you create in AWS by default?",
+            options : ["25 buckets", "50 buckets", "100 buckets", "200 buckets"],
+            answer : "100 buckets"
         },
         {
             id : 19,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Jenkins was developed for",
+            options : ["Continuous Integration", "Continuous Deployment", "Continuous Monitoring", "Continuous Delivery"],
+            answer : "Continuous Integration"
         },
         {
             id : 20,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "__________ is a human-friendly data serialization language for all programming languages.",
+            options : ["XAML", "XML", "YAML", "JSON"],
+            answer : "YAML"
         },
         {
             id : 21,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "A user story that is too large is broken into smaller stories called ________.",
+            options : ["Epic", "Story", "Change", "Incident"],
+            answer : "Epic"
         },
         {
             id : 22,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "DevOps imroved collabration and productivity by",
+            options : ["Automating infrastructure", "Automating workflow", "Continuously measuring application performance", "All of the above"],
+            answer : "All of the above"
         },
         {
             id : 23,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which command is used to undone the commit in git?",
+            options : ["git revert", "git undo", "git prev", "git reset"],
+            answer : "git revert"
         },
         {
             id : 24,
-            question : "",
-            options : ["", "", "", ""],
+            question : "In WebDriver__________command can be used to enter values onto text boxes?",
+            options : ["selenium.type()", "type()", `sendKeys("text")`, `driver.type("text")`],
             answer : ""
         },
         {
             id : 25,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "How to remove a running container in docker?",
+            options : ["docker container rm <container id/name>", 
+            "docker rm <container id/name>", 
+            "docker container delete <container id/name>", 
+            "docker container rm --force <container id/name>"],
+            answer : "docker container rm --force <container id/name>"
         },
         {
             id : 26,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which of the following testing is also known as white-box testing?",
+            options : ["Structural testing", "Error guessing technique", "Design based testing", "None of the above"],
+            answer : "Structural testing"
         },
         {
             id : 27,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "_________ is a software development life cycle model that is chosen if the development team has less experience on similar projects.",
+            options : ["Iterative Enhancement Model", "RAD", "Spiral", "Waterfall"],
+            answer : "Spiral"
         },
         {
             id : 28,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which of the following file you can configures to ensure that certain file types are never commited to the local Git repository?",
+            options : [".gitignore", "gitignore.txt", "git.ignore", "ignore.git"],
+            answer : ".gitignore"
         },
         {
             id : 29,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "To get details of a selected node in Kubernets which command is used?",
+            options : ["kubectl get nodes", "kubectl describe node <node name>", "kubestl select", "kubestl fetch"],
+            answer : "kubectl describe node <node name>"
         },
         {
             id : 30,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "EC2 stands for ?",
+            options : ["Elastic Compute Cloud", "Elastic Cloud Compute", "Elastic Configuration Cloud", "Elastic Cloud Configuration"],
+            answer : "Elastic Compute Cloud"
         },
         {
             id : 31,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Scrum development teams consist of ____.",
+            options : ["Developers", "Quality assurance specialists", "Scrum Masters", "All of the above"],
+            answer : "All of the above"
         },
         {
             id : 32,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "What is version control?",
+            options : ["a type of architecture used to manage large databases", 
+            "a system that shows, tracks, and controls changes to a set of files over time", 
+            "a programmatic design pattern used to manage code between multiple engineering teams", 
+            "a type of software that links a project with a gitHub repository"],
+            answer : "a system that shows, tracks, and controls changes to a set of files over time"
         },
         {
             id : 33,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "In which of the following service models the hardware is virtualized in the cloud?",
+            options : ["Saas", "Paas", "Caas", "Iaas"],
+            answer : "Iaas"
         },
         {
             id : 34,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "What is a microservice?",
+            options : ["A design used primarily in functional programming and object-oriented programming", 
+            "A style of design for enterprise systems based on a loosely coupled component architecture", 
+            "A small program that represents discrete logic that executes within a well-defined boundary on dedicated hardware", 
+            "A very small piece of code that never gets any bigger than 10 lines"],
+            answer : "A style of design for enterprise systems based on a loosely coupled component architecture`"
         },
         {
             id : 35,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Object oriented technology's use of ___________ facilitates reuse of the code and architecture while its ______________ feature provides systems with stability, as a small change in requirements doesn't require massive changes in the system.",
+            options : ["Inheritance, Encapsulation", "Inheritance, Polymorphism", 
+            "Encapsulation, Polymorphism", "Polymorphism, Abstraction"],
+            answer : "Inheritance, Encapsulation"
         },
         {
             id : 36,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "The UML supports event-based modeling using _________ diagrams.",
+            options : ["Deployment", "Collaboration", "State chart", "All of the mentioned"],
+            answer : "State chart"
         },
         {
             id : 37,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "SDLC stands for",
+            options : ["Software Development Life Cycle", "System Development Life cycle",
+                        "Software Design Life Cycle", "System Design Life Cycle"],
+            answer : "Software Development Life Cycle"
         },
         {
             id : 38,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "Which is the most important feature of spiral model?",
+            options : ["Quality management", "Risk management", "Performance management", "Efficiency management"],
+            answer : "Risk management"
         },
         {
             id : 39,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "The SDLC Model most suitable for small projects with clear requirements is",
+            options : ["Spiral Model", "Incremental Model", "Waterfall Model", "Prototyping Model"],
+            answer : "Waterfall Model"
         },
         {
             id : 40,
-            question : "",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "An Enterprise application runs on Amazon EC2 instances in multiple Availability Zones behind an Application Load Balancer. If one of these instances fails, what occurs?",
+            options : ["The load balancer will automatically replace the failed instance.", 
+            "The load balancer will stop sending requests to the failed instance.", 
+            "The load balancer will terminate the failed instance.", 
+            "The load balancer will return 504 Gateway Timeout errors until the instance is replaced."],
+            answer : "The load balancer will stop sending requests to the failed instance."
         }
     ]
 }
