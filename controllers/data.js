@@ -2493,7 +2493,7 @@ public class MainApp {
     questions : [
         {
             id : 1,
-            question : ".Net test will available on 02/02/2023",
+            question : ".Net test will available on 03/02/2023. Do not click submit button, just close this page. Thank you",
             options : ["", "", "", ""],
             answer : ""
         }
