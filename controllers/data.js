@@ -2200,7 +2200,7 @@ scope="singleton">
         },
         {
             id : 18,
-            question : "The classes in the _________ directory must be available for the “Classloader” of the application?",
+            question : `The classes in the _________ directory must be available for the "Classloader" of the application?`,
             options : ["/root/lib/classes/", "/root/classes/", "/WEB-INF/lib/classes/", "/WEB-INF/classes/"],
             answer : "/WEB-INF/classes/"
         },
@@ -2493,244 +2493,647 @@ public class MainApp {
     questions : [
         {
             id : 1,
-            question : ".Net test will available on 03/02/2023. Do not click submit button, just close this page. Thank you",
-            options : ["", "", "", ""],
-            answer : ""
+            question : "How many Bytes are stored by 'Long' Datatype in C# .net?",
+            options : ["8", "4", "2", "1"],
+            answer : "8"
+        },
+        {
+            id : 2,
+            question : `What will be the output of the following code snippet?
+<pre class="language-java"><code>
+using System;
+class program
+{
+    static void Main(string[] args)
+    {
+        int x = 8;
+        int b = 16;
+        int c = 64;
+        x /= c /= b;
+        Console.WriteLine(x + " " + b+ " " +c);
+        Console.ReadLine();
+    }
+}
+</code></pre>`,
+            options : ["2 16 4", "4 8 16", "2 4 8", "8 16 64"],
+            answer : "2 16 4"
+        },
+        {
+            id : 3,
+            question : "Struct's data members are ___ by default.",
+            options : ["Protected", "Public", "Private", "Default"],
+            answer : "Private"
+        },
+        {
+            id : 4,
+            question : "In C# which keywords are used to declare reference types: ",
+            options : ["class", "interface", "delegate", "All of the above"],
+            answer : "All of the above"
+        },
+        {
+            id : 5,
+            question : "Correct way to overload +operator?",
+            options : ["public sample operator + (sample a, sample b)", 
+            "public abstract operator + (sample a,sample b)", 
+            "public static sample operator + (sample a, sample b)", 
+            "all of the mentioned"],
+            answer : "all of the mentioned"
+        },
+        {
+            id : 6,
+            question : `What could be the output for the set of code?
+<pre class="language-java"><code>  
+class overload
+{
+    public int x;
+    int y;
+
+    public int add(int a)
+    {
+        x = a + 1;
+        return x;
+    }
+
+    public int add(int a, int b)
+    {
+        x = a + 2;
+        return x;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        overload obj = new overload();
+        overload obj1 = new overload();
+        int a = 0;
+        obj.add(6);
+        obj1.add(6, 2);
+        Console.WriteLine(obj.x);
+        Console.WriteLine(obj1.x);
+        Console.ReadLine();
+    }
+}
+</code></pre>`,
+            options : ["8, 8", "0, 2", "8, 10", "7, 8"],
+            answer : "7, 8"
+        },
+        {
+            id : 7,
+            question : `What will be the output for the given set of code?
+<pre class="language-java"><code>            
+class a {
+    public void fun()
+    {
+    Console.WriteLine("base method");
+    }
+}
+
+class b: a
+{
+    public new void fun()
+    {
+    Console.WriteLine(" derived method ");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+    b k = new b(); k.fun();
+    Console.ReadLine();
+    }
+}
+</code></pre>`,
+            options : ["base method", "derived method", "Code runs successfully prints nothing", "Compile time error"],
+            answer : "derived method"
+        },
+        {
+            id : 8,
+            question : "If base class consist of two private integers, one static integer and derived class consist of two static integers and one private integer. What would be the size of derived class object?",
+            options : ["size of object depends on sizes of its non static data members", 
+            "size of a derived class object is sum of sizes of non static data members of base class and derived class", 
+            "size of object is calculated using sizeof() method", 
+            "none of the mentioned"],
+            answer : "size of object depends on sizes of its non static data members"
+        },
+        {
+            id : 9,
+            question : `What will be the output for the given set of code?
+<pre class="language-java"><code>            
+using System;
+
+class Class2 {
+    void change( out int x, out int y)
+    {
+        x = 10;
+        y = 20;
+    }
+
+    static void Main() {
+        int a = 50; 
+        int b = 100; 
+        Class2 obj1 = new Class2();
+        obj1.change(out a, out b);
+        Console.WriteLine("a is " + a + " and b is " + b );
+    }
+}
+</code></pre>`,
+            options : ["a is 60 and b is 120", "a is 10 and b is 20", "a is 50 and b is 100", "Compile time error"],
+            answer : "a is 10 and b is 20"
+        },
+        {
+            id : 10,
+            question : `In _________ , the value of an argument is copied into 
+            the formal parameter of the method & in _________, the changes made to the
+            Reference parameter will affect the actual argument passed.`,
+            options : ["call-by-reference, call-by-value", "call-by-value, call-by-reference", 
+            "method overloading, method overriding", "call-by-value, call-by-reference"],
+            answer : "call-by-value, call-by-reference"
+        },
+        {
+            id : 11,
+            question : "What is true about Destructor in C#",
+            options : ["A destructor is a method in a class that is called when the object is destroyed.", 
+            "Like constructors destructors will not have any return type.", 
+            "Destructors don't take any arguments & are always public.", 
+            "All of the above"],
+            answer : "All of the above"
+        },
+        {
+            id : 12,
+            question : `What will be the output for the given set of code?
+<pre class="language-java"><code>            
+using System;
+
+class Class1 {
+
+    void change(ref int x)
+    {
+        x = x * 10;
+        Console.WriteLine("Inside method change x is " + x);
+    }
+
+    static void Main() {
+        int y;
+        Class1 obj = new Class1();
+        Console.WriteLine("Before calling change y is " + y);
+        obj.change(ref y);
+        Console.WriteLine("After calling change y is " + y);
+    }
+}
+</code></pre>`,
+            options : [
+`Before calling change y is 100 <br>
+Inside method change x is 100 <br>
+After calling change y is 10 <br>`, 
+`Before calling change y is 100 <br>
+Inside method change x is 10 <br>
+After calling change y is 100 <br>`,
+`Before calling change y is 10 <br>
+Inside method change x is 100 <br>
+After calling change y is 100 <br>`,
+"Compile time error",
+],
+            answer : "Compile time error"
+        },
+        {
+            id : 13,
+            question : "The ____________ is the execution engine for .NET applications and servers as the interface between .NET applications and the operating system.",
+            options : ["Common Language Specifications (CLS)", 
+            "Common Language Runtime (CLR)", 
+            "Common Type System (CTS)", 
+            "Framework Class Library (FCL)"],
+            answer : "Common Language Runtime (CLR)"
+        },
+        {
+            id : 14,
+            question : `Which of the following statements are TRUE about the .NET CLR? <br>
+1. It provides a language-neutral development & execution environment. <br>
+2. It ensures that an application would not be able to access memory that it is not authorized to access. <br>
+3. It provides services to run "managed" applications. <br>
+4. The resources are garbage collected. <br>
+5. It provides services to run "unmanaged" applications.`,
+            options : ["Only 1 and 2", "Only 1, 2 and 4", "1, 2, 3, 4", "Only 3 and 4"],
+            answer : "1, 2, 3, 4"
+        },
+        {
+            id : 15,
+            question : "How can you comment using Razor Syntax?",
+            options : ["*@ Comment me *@", "@* Comment me *@", 
+            "@* Comment me @*", "*@ Comment me @*"],
+            answer : "@* Comment me *@"
+        },
+        {
+            id : 16,
+            question : "Which HTML helper method is used for rendering the partial view in the parent view?",
+            options : ["@html.Partial()", "@html.RenderPartial()", "@html.RenderAction()", "All of the above"],
+            answer : "All of the above"
+        },
+        {
+            id : 17,
+            question : "Which of the following is not a namespace in the .NET Framework Class Library?",
+            options : ["System.Process", "System.Security", "System.Threading", "System.xml"],
+            answer : "System.Process"
+        },
+        {
+            id : 18,
+            question : "Two types of cookies are available in ASP.NET, ___________ resides on the client machine for a single session and is valid until the user logs out & ___________ resides on the user machine for a period specified for its expiry. It may be an hour, a day, a month, or never.",
+            options : ["Session Cookie, Persistent Cookie", "Persistent Cookie, Session Cookie", 
+            "First-party Cookie, Permanent Cookie", "Persistent Cookie, Secure Cookie"],
+            answer : "Session Cookie, Persistent Cookie"
+        },
+        {
+            id : 19,
+            question : "_________ is a stored-value type that keeps track of each executing thread and its location. It is used for static memory allocation. __________ is a stored reference type that keeps track of the more precise objects or data. It is used for dynamic memory allocation.",
+            options : ["Heap, Stack", "Stack, Heap", "RAM, Hard drive", "Queue, Heap"],
+            answer : "Stack, Heap"
+        },
+        {
+            id : 20,
+            question : `State whether the following statements about the Microsoft Intermediate Language (MSIL) are TRUE or FALSE. <br>
+            i) The MSIL code includes instructions to load, initialize and invoke methods on objects. <br>
+            ii) The MSIL code is collected and assembled in the form of byte codes and is converted to a .NET assembly.`,
+            options : ["i-True, ii-False", "i-False, ii-True", "i-True, ii-True", "i-False, ii-False"],
+            answer : "i-True, ii-True"
+        },
+        {
+            id : 21,
+            question : "Which object in ASP.NET provides a global storage mechanism for state data that needs to be accessible to all pages in a given Web application?",
+            options : ["Session", "Application", "ViewState", "None of the above"],
+            answer : "Application"
+        },
+        {
+            id : 22,
+            question : "The __________ in MVC architecture handles any incoming URL request",
+            options : ["Model", "Controller", "View", "All of the above"],
+            answer : "Controller"
+        },
+        {
+            id : 23,
+            question : "How will you create the SQL Server Connection Objects in Code? Choose the correct option.",
+            options : [`SqlConnection con = new SqlConnection ("Data Source=ServerName; <br>
+            Initial Catalog=DatabaseName;Integrated Security=True");`, 
+            `SqlConnection con = new SqlConnection(); <br>
+            con.ConnectionString = ("Data Source=ServerName; Initial Catalog=DatabaseName;Integrated Security=True");`, 
+            `using (SqlConnection con = new SqlConnection("Data Source=ServerName; <br>
+            Initial Catalog=DatabaseName;Integrated Security=True")) <br>
+            { <br>
+            con.Open(); <br>
+            - - - - - - <br>
+            - - - - - - <br>
+            }`, 
+            "All of the above codes are correct."],
+            answer : "All of the above codes are correct."
+        },
+        {
+            id : 24,
+            question : `Which of the following is the correct way to call the function MyFun() of the Sample class given below?
+<pre class="language-java"><code>   
+class Sample
+{
+    public int MyFun(int i)
+    {
+        Console.WriteLine("Welcome to cceestudy.online !" );
+        return 0;
+    }
+}
+</code></pre>`,
+            options : [
+`<pre class="language-java"><code>   
+delegate void del(int i);
+Sample s = new Sample();
+deld = new del(ref s.MyFun);
+d(10);
+</code></pre>`,
+`<pre class="language-java"><code>   
+delegate int del(int i);
+Sample s = new Sample(.);
+del = new delegate(ref MyFun);
+del(10);
+</code></pre>`,
+`<pre class="language-java"><code>   
+Sample s = new Sample();
+delegate void del = new delegate(ref MyFun);
+del(10);
+</code></pre>`,
+`<pre class="language-java"><code>   
+delegate int del(int i);
+del d;
+Sample s = new Sample();
+d = new del(ref s.MyFun);
+d(10);
+</code></pre>`,
+],
+            answer : 
+`<pre class="language-java"><code>   
+delegate int del(int i);
+del d;
+Sample s = new Sample();
+d = new del(ref s.MyFun);
+d(10);
+</code></pre>`
+        },
+        {
+            id : 25,
+            question : "ByDefault ASP.Net SessionID is stored in _________.",
+            options : ["Application", "Session", "Cookies", "ViewState"],
+            answer : "Cookies"
+        },
+        {
+            id : 26,
+            question : "How do you execute multiple SQL statements using a DataReader?",
+            options : ["Call the ExecuteReadermethod of two Command objects and assign the results tothe same instance of a DataReader.", 
+            "Call the ExecuteReadermethod of a single Command object twice.", 
+            "Set the Command.CommandTextproperty to multiple SQL statements delimited by a semicolon.", 
+            "Set the Command.CommandTypeproperty to multiple result sets."],
+            answer : "Set the Command.CommandTextproperty to multiple SQL statements delimited by a semicolon."
+        },
+        {
+            id : 27,
+            question : "What is synchronization in reference to a thread?",
+            options : ["It's a process of handling situations when two or more threads need access to a shared resource", 
+            "It's a process by which many threads are able to access the same shared resource simultaneously", 
+            "It's a process by which a method is able to access many different threads simultaneously", 
+            "It's a method that allows too many threads to access any information they require"],
+            answer : "It's a process of handling situations when two or more threads need access to a shared resource"
+        },
+        {
+            id : 28,
+            question : "The _________ namespace includes classes and interfaces that return information about types, methods, and fields.",
+            options : ["system", "system.security", "system.data", "system.reflection"],
+            answer : "system.reflection"
+        },
+        {
+            id : 29,
+            question : `What will be the output of the following C# code?
+<pre class="language-java"><code>   
+{
+    try 
+    {
+        int []a = {1, 2, 3, 4, 5};
+        for (int i = 0; i < 5; ++i) 
+        Console.WriteLine(a[i]);
+        int x = (1 / Convert.ToInt32(0));
+    }
+    catch(IndexOutOfRangeException e) 
+    {
+        Console.WriteLine("A");        	
+    }
+    catch(ArithmeticException e) 
+    {     	
+        Console.WriteLine("B");
+    }
+    Console.ReadLine();
+}
+</code></pre>`,
+            options : ["1234", "12345", "Run time error", "12345B"],
+            answer : "12345B"
+        },
+        {
+            id : 30,
+            question : "RedirectToAction() Method for which Status code represents?",
+            options : ["304", "302", "300", "None"],
+            answer : "302"
+        },
+        {
+            id : 31,
+            question : `State whether the following statements about .NET assembly are True or False. <br>
+i) Assembly physically exists as DLLs or EXEs. <br>
+ii) Assembly can include any file types like image files, text files, etc. along with DLLs or EXEs. <br>
+iii) One assembly can contain only one file.`,
+            options : ["i-True, ii-True, iii-True", "i-False, ii-True, iii-True", "i-True, ii-False, iii-True", "i-True, ii- True, iii-False"],
+            answer : "i-True, ii- True, iii-False"
+        },
+        {
+            id : 32,
+            question : "How will you store and retrieve value in viewstate?",
+            options : [
+`// Storing the data in viewstate <br>
+ViewState["SiteName"]="cceestudy"; <br>
+// Retrieving Value from a View State <br>
+Label1.Text = ViewState["SiteName"].ToString();`, 
+
+`// Storing the data in viewstate <br>
+ViewState obj=new ViewState <br>
+ViewState [obj]="cceestudy"; <br>
+// Retrieving Value from a View State <br>
+Label1.Text = ViewState[obj].ToString();`,
+
+`// Storing the data in viewstate <br>
+ViewState obj=new ViewState <br>
+ViewState [obj]="cceestudy"; <br>
+// Retrieving Value from a View State <br>
+Label1.Text = ViewState[obj].ToString();`,
+
+"None of the above."],
+            answer : 
+`// Storing the data in viewstate
+ViewState["SiteName"]="cceestudy";
+// Retrieving Value from a View State
+Label1.Text = ViewState["SiteName"].ToString();`
+        },
+        {
+            id : 33,
+            question : `Which of the following are the advantages of Garbage Collector? <br>
+            i) Allow us to develop an application without having worry to about free memory. <br>
+            ii) Allocates memory for objects efficiently on the managed heap. <br>
+            iii) Provides memory safety by making sure that an object cannot use the content of another object.`,
+            options : ["i and ii only", "ii and iii only", "i and iii only", "All i, ii and iii"],
+            answer : "All i, ii and iii"
+        },
+        {
+            id : 34,
+            question : `Suppose a Student class has an indexed property. This property is used to set or retrieve values to/from an array of 5 integers called scores[]. We want the property to report "Invalid Index" message if the user attempts to exceed the bounds of the array. Which of the following is the correct way to implement this property?`,
+            options : [
+`<pre class="language-java"><code>   
+class Student
+{
+    int[] scores = new int[5] {3, 2, 4, 1, 5};
+    public int this[ int index ]
+    {
+        set
+        {
+            if (index < 5)
+                scores[index] = value;
+            else 
+                Console.WriteLine("invalid Index");
         }
-        // {
-        //     id : 2,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 3,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 4,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 5,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 6,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 7,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 8,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 9,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 10,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 11,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 12,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 13,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 14,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 15,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 16,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 17,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 18,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 19,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 20,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 21,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 22,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 23,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 24,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 25,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 26,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 27,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 28,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 29,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 30,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 31,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 32,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 33,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 34,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 35,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 36,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 37,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 38,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 39,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // },
-        // {
-        //     id : 40,
-        //     question : "",
-        //     options : ["", "", "", ""],
-        //     answer : ""
-        // }
+    }
+}
+</code></pre>`,
+`<pre class="language-java"><code>   
+class Student
+{
+    int[] scores = new int[5] {3, 2, 4, 1, 5};
+    public int this[ int index ]
+    {
+        get
+        {
+            if (index < 5)
+                return scores[ index ];
+            else
+            {
+                Console.WriteLine("Invalid Index");
+                return 0;
+            }
+        }
+        set
+        {
+            if (index < 5)
+                scores[ index ] = value;
+            else    
+                Console.WriteLine("Invalid Index");
+        }
+    }
+}
+</code></pre>`,
+`<pre class="language-java"><code>   
+class Student
+{
+    int[] scores = new int[5] {3, 2, 4, 1, 5};
+    public int this[ int index ]
+    {
+        get
+        {
+            if (index < 5)
+                return scores[ index ];
+            else
+            {
+                Console.WriteLine("Invalid Index");
+                return 0;
+            }
+        }
+    }
+}
+</code></pre>`,
+`<pre class="language-java"><code>   
+class Student
+{
+    int[] scores = new int[5] {3, 2, 4, 1, 5};
+    public int this[ int index ]
+    {
+        get
+        {
+            if (index < 5)
+               scores[ index ] = value;
+            else
+            {
+                Console.WriteLine("Invalid Index");
+            }
+        }
+        set
+        {
+            if (index < 5)
+                return scores[ index ];
+            else   
+            {
+                Console.WriteLine("Invalid Index");
+                return 0;
+            } 
+        }
+    }
+}
+</code></pre>`
+            ],
+            answer : 
+`<pre class="language-java"><code>   
+class Student
+{
+    int[] scores = new int[5] {3, 2, 4, 1, 5};
+    public int this[ int index ]
+    {
+        get
+        {
+            if (index < 5)
+                return scores[ index ];
+            else
+            {
+                Console.WriteLine("Invalid Index");
+                return 0;
+            }
+        }
+        set
+        {
+            if (index < 5)
+                scores[ index ] = value;
+            else    
+                Console.WriteLine("Invalid Index");
+        }
+    }
+}
+</code></pre>`
+        },
+        {
+            id : 35,
+            question : "What is the extension of MVC view when using C#?",
+            options : ["cshtml", "vbhtml", "Both of the above", "None of these"],
+            answer : "Both of the above"
+        },
+        {
+            id : 36,
+            question : "On call of which type of method the new created thread will not start executing?",
+            options : ["Begin()", "Start()", "New()", "All of the mentioned"],
+            answer : "Start()"
+        },
+        {
+            id : 37,
+            question : "Which of the following statements are correct about delegates?",
+            options : ["Delegates cannot be used to call a static method of a class.", 
+            "Delegates cannot be used to call procedures that receive variable number of arguments.", 
+            "If signatures of two methods are same they can be called through the same delegate object.", 
+            "Delegates cannot be used to call an instance function. Delegates cannot be used to call an instance subroutine."],
+            answer : "Delegates cannot be used to call procedures that receive variable number of arguments."
+        },
+        {
+            id : 38,
+            question : `Choose the correct one.  
+<pre class="language-java"><code>   
+int[] A = { 0, 2, 4, 5, 6, 8 };
+int[] B = { 1, 3, 5, 7, 8 };
+  
+var nums = A.Union(B);   
+   
+foreach (var n in nums)
+{
+    Console.Write(n + " ");
+}
+</code></pre>`,
+            options : ["0 2 4 5 6 8 1 3 5 7 8", "0 2 4 5 6 8 1 3 7", 
+            "0 1 2 3 4 5 6 7 8", "None of the above"],
+            answer : "0 2 4 5 6 8 1 3 7"
+        },
+        {
+            id : 39,
+            question : "What is RouteConfig.cs in ASP.Net MVC?",
+            options : ["RouteConfig.cs is used to register MVC config statements, route config.", 
+            "RouteCOnfig.css is used to register global MVC bundles.", "Both of the above", "None of these"],
+            answer : "Both of the above"
+        },
+        {
+            id : 40,
+            question : `For the given set of codes, what is the output?
+<pre class="language-java"><code>   
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[] nums = { 1, -2, -3, 5 };
+        var posNums = from n in nums
+                      orderby n descending
+                      select n*4 / 2;
+        Console.Write("The values in nums: ");
+        foreach (int i in posNums) Console.Write(i + " ");
+        Console.WriteLine();
+        Console.ReadLine();
+    }
+}
+</code></pre>`,
+            options : ["10 2 -4 -6", "5 1 -2 -3", "1 5 -2 -3", "Run time error"],
+            answer : "10 2 -4 -6"
+        }
     ]
 },
 {
