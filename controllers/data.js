@@ -3409,6 +3409,522 @@ class Program
             answer : "The load balancer will stop sending requests to the failed instance."
         }
     ]
+},
+{
+    moduleName : "Object Oriented Programming with Java - test 2",
+    questions : [
+        {
+            id : 1,
+            question : `What is the output of the below code snippet:
+<pre class="language-java"><code>
+class Base {
+
+    public void fun() {
+        System.out.println("Base fun()");
+    }
+
+    public void fun1() {
+        System.out.println("Base fun1()");
+        fun();
+    }
+
+}
+
+class derived extends Base {
+
+    public void fun() {
+        System.out.println("Derived fun()");
+    } 
+}
+
+public class MainClass {
+
+    public static void main(String[] args){
+        derived d1 = new Base();
+        d1.fun1();
+    }
+}
+
+</code></pre>`,
+            options : ["Error: Type mismatch: cannot convert from Base to derived", 
+            "Base fun1() <br> Derived fun()", 
+            "Base fun1() <br> Base fun()", 
+            "Error : cannot call the method of the base class"],
+            answer : "Error: Type mismatch: cannot convert from Base1 to derived"
+        },
+        {
+            id : 2,
+            question : `What will happen when you attempt to compile and run this code
+<pre class="language-java"><code>
+class Base {
+
+    public final void method1() {
+        System.out.println("method");
+    }
+}
+
+public class Fin extends Base {
+
+    public static void main(String args[]){
+        Base b = new Base();
+        b.method1();
+    }
+}
+</code></pre>`,
+            options : ["It will print method", "Compile time error", "Runtime error", "It will compile but doesn't print anything"],
+            answer : "It will print method"
+        },
+        {
+            id : 3,
+            question : "Which assignments are illegal?",
+            options : ["long test = 012;", "float f = -412;", "int other = (int)true;", "double d = 0x12345678;"],
+            answer : "int other = (int)true;"
+        },
+        {
+            id : 4,
+            question : `What will happen when you attempt to compile and run this code
+<pre class="language-java"><code>
+public class Over {
+
+    public static void main(String[] args){
+        Under u = new Under();
+        u.test();
+    }
+
+    int test(){
+        System.out.println("over");
+        return 1;
+    }
+}
+
+class Under extends Over {
+
+    int test(){
+        super.test();
+        System.out.println("Under");
+        return 1;
+    }
+}
+
+</code></pre>`,
+            options : ["This code compiles, runs and displays over followed by Under", 
+            "This code compiles, runs and displays Under followed by over", 
+            "This code does not compile", 
+            "Code will compile but gives runtime error"],
+            answer : "This code compiles, runs and displays over followed by Under"
+        },
+        {
+            id : 5,
+            question : `What will be the output of this code:
+<pre class="language-java"><code>
+public class TestClass {
+    
+    public static void main ( String args[] ){
+        Strings s = "hello";
+        StringBuffer sb = new StringBuffer("hello");
+
+        if(s == sb.toString()){
+            System.out.println("Equal");
+        }
+        else 
+            System.out.println("Not Equal");
+    } 
+}
+</code></pre>`,
+            options : ["Equal", "Not Equal", "Compile time error", "Nothing will print"],
+            answer : "Not Equal"
+        },
+        {
+            id : 6,
+            question : `What will be the output of this code:
+<pre class="language-java"><code>
+public class Exceptiondemo {
+    
+    public static void main ( String args[] ){
+        int i = 1, j = 1;
+        try {
+            i++;
+            j--;
+            if( i / j > 1)
+                i++;
+        }
+        catch (Exception e){
+            System.out.println("Exception");
+        } 
+        catch (ArithmeticException e){
+            System.out.println("Arithmetic Exception");
+        }
+        catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Array Index Exception");
+        }
+        finally{
+            System.out.println("finally");
+        }
+    } 
+}
+</code></pre>`,
+            options : ["Exception", "Arithmetic Exception", "Array Index Exception", 
+            "Compile time error: exception ArithmeticException has already been caught"],
+            answer : "Compile time error: exception ArithmeticException has already been caught"
+        },
+        {
+            id : 7,
+            question : `What will happen when you attempt to compile and run this code
+<pre class="language-java"><code>
+public class Test {
+
+    public static void main( String args[] ){
+        int a = 5;
+        System.out.println( cube(a) );
+    }
+    
+    int cube ( int theNum ){
+        return theNum * theNum * theNum;
+    }
+}
+</code></pre>`,
+            options : ["125", "5", "cube(a)", "Compile time error"],
+            answer : "Compile time error"
+        },
+        {
+            id : 8,
+            question : `What will be the output of this code:
+<pre class="language-java"><code>
+public class Tester {
+    int var;
+
+    Tester (double var){
+        this.var = (int)var;
+    }
+
+    Tester(int var){
+        this("hello");
+    }
+
+    Tester(String s){
+        this();
+        System.out.println(s);
+    }
+
+    Tester(){
+        System.out.println("good-bye");
+    }
+
+    public static void main( String[] args ){
+        Tester t = new Tester(5);
+    }
+}
+</code></pre>`,
+            options : ["good-bye <br> hello", "hello", "5", "hello <br> good-bye"],
+            answer : "good-bye <br> hello"
+        },
+        {
+            id : 9,
+            question : "Which of the following statement is false?",
+            options : ["If a class has any abstract methods it must be declared abstract itself.", 
+            "All methods in an abstract class must be declared as abstract", 
+            "When applied to a class, the final modifier means it cannot be sub-classed", 
+            "transient and volatile are Java modifiers"],
+            answer : "All methods in an abstract class must be declared as abstract"
+        },
+        {
+            id : 10,
+            question : `What will be the output of this code:
+<pre class="language-java"><code>
+public class RTException {
+
+    public static void throwit () {
+        System.out.print("throw it ");
+        throw new RuntimeException();
+    }
+
+    public static void main( String[] args){
+        try{
+            System.out.print("hello ");
+            throwit();
+        }
+        catch (Exception re){
+            System.out.print("caught ");
+        }
+        finally {
+            System.out.print("finally ");
+        }
+        System.out.println("after ");
+    }
+}
+</code></pre>`,
+            options : ["hello throw it caught finally after", "hello caught", "hello finally after", "Compile time error"],
+            answer : "hello throw it caught finally after"
+        },
+        {
+            id : 11,
+            question : "Which collection class allows you to access its elements by associating a key with an element's value, and provides synchronization?",
+            options : ["java.util.SortedMap", "java.util.TreeMap", "java.util.TreeSet", "java.util.HashTable"],
+            answer : "java.util.HashTable"
+        },
+        {
+            id : 12,
+            question : "Which statement is wrong?",
+            options : ["Interface can extend an interface.", 
+            "We can define a variable inside an interface.", 
+            "Interface can implement an interface.", 
+            "Interface is pure abstract class."],
+            answer : "Interface can implement an interface."
+        },
+        {
+            id : 13,
+            question : `What access control keyword should you use to allow 
+            other classes to access a method freely within its package, but to restrict 
+            classes outside of the package from accessing that method?`,
+            options : ["public", "protected", "private", "do not supply an access control keyword"],
+            answer : "do not supply an access control keyword"
+        },
+        {
+            id : 14,
+            question : "Objects are passed by value or reference?",
+            options : ["By value", "By reference", "it depends upon how you specify", "None of the above"],
+            answer : "By value"
+        },
+        {
+            id : 15,
+            question : "If you write System.exit(0) at the end of try block, will the finally block still execute?",
+            options : ["Yes", "No", "It depends upon return statement", "Can't say"],
+            answer : "No"
+        },
+        {
+            id : 16,
+            question : "Which is not a method of Object class?",
+            options : ["toString", "clone", "equals", "compare"],
+            answer : "compare"
+        },
+        {
+            id : 17,
+            question : "Which is valid declaration of a String?",
+            options : ["String s2 = 'null';", "String s3 = (String) 'abc';", 
+            "String s1 = null;", "Strings4 = (String) '\ufeed'"],
+            answer : "String s1 = null;"
+        },
+        {
+            id : 18,
+            question : "Which is valid declaration within an interface?",
+            options : ["public static short stop = 23;", "protected short stop = 23;", 
+            "transient short stop = 23;", "final void madness (short stop);"],
+            answer : "public static short stop = 23;"
+        },
+        {
+            id : 19,
+            question : `What will be the output of this code:
+<pre class="language-java"><code>
+public class Equals{
+
+    public static void main(String[] args){
+        int x = 100;
+        double y = 100.1;
+        boolean b = (x == y);
+        System.out.println(b);
+    }
+}
+</code></pre>`,
+            options : ["true", "false", "Compile time error", "Runtime error"],
+            answer : "false"
+        },
+        {
+            id : 20,
+            question : "Which collection class allows you to grow or shrink its size and provides indexed access to its elements, but whose methods are not synchronised?",
+            options : ["java.util.HashSet", "java.util.LinkedHashSet", "java.util.List", "java.util.ArrayList"],
+            answer : "java.util.ArrayList"
+        },
+        {
+            id : 21,
+            question : `What will be the output of this code:
+<pre class="language-java"><code>
+String x = 'xyz';
+x.toUpperCase();
+String y = x.replace('Y', 'y');
+y = y + "abc";
+System.out.println(y);
+</code></pre>`,
+            options : ["abcXyZ", "XyZabc", "xyzabc", "compilation fails"],
+            answer : "xyzabc"
+        },
+        {
+            id : 22,
+            question : "How can you serialize an object?",
+            options : ["You have to make the class of the object implement the interface Serializable.", 
+            "You must call the method serializeObject() (which is inherited from class Object) on the object.", 
+            "You should call the static method serialize(Object obj) from class Serializer, with as argument the object to be serialized.", 
+            "You don't have to do anything, because all objects are serializable by default."],
+            answer : "You have to make the class of the object implement the interface Serializable."
+        },
+        {
+            id : 23,
+            question : `What will be the output of this code:
+<pre class="language-java"><code>
+class X {
+    Y b = new Y();
+    X() {
+        System.out.print("X");
+    }
+}
+class Y {
+    Y() {
+        System.out.print("Y");
+    }
+}
+public class Z extends X {
+    Y y = new Y();
+    Z() {
+        System.out.print("Z");
+    }
+
+    public static void main(String[] args) {
+        new Z();
+    }
+}
+</code></pre>`,
+            options : ["Z", "YZ", "XYZ", "YXYZ"],
+            answer : "YXYZ"
+        },
+        {
+            id : 24,
+            question : "Which of the following statements are true?",
+            options : ["static methods do not have access to the implicit variable called this", 
+            "A static method may be called without creating an instance of its class", 
+            "All of Above", 
+            "None of Above"],
+            answer : "static methods do not have access to the implicit variable called this"
+        },
+        {
+            id : 25,
+            question : "Which of the following are methods of the Runnable interface?",
+            options : ["run", "start", "yield", "stop"],
+            answer : "run"
+        },
+        {
+            id : 26,
+            question : "What are a native methods?",
+            options : ["Native methods are usually used to interface with system calls or libraries written in other programming languages.", 
+            "Native methods are as same like as abstract method.", 
+            "Both of these.", 
+            "None of these."],
+            answer : "Native methods are usually used to interface with system calls or libraries written in other programming languages."
+        },
+        {
+            id : 27,
+            question : `What will be the output of this code:
+<pre class="language-java"><code>
+class Base {
+    void show(){
+        System.out.println("Base Class");
+    }
+}
+
+class Derived {
+    void show(){
+        System.out.println("Derived Class");
+    }
+}
+
+public class MainClass {
+    public static void main(String[] args) {
+        Base b1 = new Base();
+        Derived d1 = new Derived();
+        b1.show();
+        d1.show();
+        Base b2 = d1;
+        b2.show();
+        d1.show();
+    }
+}
+</code></pre>`,
+            options : ["Error : Cannot convert Base to Derived", 
+            "Base Class <br> Derived Class <br> Base Class <br> Derived Class", 
+            "Base Class <br> Derived Class <br> Derived Class <br> Base Class", 
+            "Base Class <br> Derived Class <br> Derived Class <br> Derived Class"],
+            answer : "Error : Cannot convert Base to Derived"
+        },
+        {
+            id : 28,
+            question : "String Class is",
+            options : ["is final", "is public", "is serializable", "All of the above"],
+            answer : "All of the above"
+        },
+        {
+            id : 29,
+            question : "Which keyword when applied on a method indicates that only one thread should execute the method at a time. Select the one correct answer.",
+            options : ["transient", "static", "final", "Synchronized"],
+            answer : "Synchronized"
+        },
+        {
+            id : 30,
+            question : "which method is used to know the element add the top of the stack?",
+            options : ["pop()", "top()", "peek()", "search()"],
+            answer : "peek()"
+        },
+        {
+            id : 31,
+            question : "Which interface provides the capability to store objects using a key-value pair?",
+            options : ["Java.util.Map", "Java.util.Set", "Java.util.List", "Java.util.Collection"],
+            answer : "Java.util.Map"
+        },
+        {
+            id : 32,
+            question : "Which of the following statements about arrays is syntactically wrong?",
+            options : ["Person[] p = new Person[5];", "Person p[5];", "Person[] p [];", "Person p [][] = new Person[2][];"],
+            answer : "Person p[5];"
+        },
+        {
+            id : 33,
+            question : "Process of writing the state of object into byte stream",
+            options : ["Deserialisation", "Externlisation", "serialization", "print"],
+            answer : "serialization"
+        },
+        {
+            id : 34,
+            question : "To display text on the applet _________ method is used.",
+            options : ["showString()", "drawString()", "println()", "printString()"],
+            answer : "drawString()"
+        },
+        {
+            id : 35,
+            question : "Which of the following are true about interfaces.",
+            options : ["Methods declared in interfaces are implicitly private.", 
+            "Variables declared in interfaces are implicitly public, static, and final.", 
+            "The keyword implements indicate that an interface inherits from another.", 
+            "An interface can not extend any number of interfaces."],
+            answer : "Variables declared in interfaces are implicitly public, static, and final."
+        },
+        {
+            id : 36,
+            question : "What is the process of defining two or more methods within same class that have same name but different parameters declaration?",
+            options : ["method overloading", "method overriding", "method hiding", "none of the mentioned"],
+            answer : "method overloading"
+        },
+        {
+            id : 37,
+            question : "Which package contains all the classes and interfaces for the Collection framework",
+            options : ["java.lang", "java.collections", "java.util", "java.io"],
+            answer : "java.util"
+        },
+        {
+            id : 38,
+            question : "Which of the below is invalid identifier with the main method?",
+            options : ["public", "static", "private", "final"],
+            answer : "private"
+        },
+        {
+            id : 39,
+            question : "Which keyword is used by the method to refer to the object that invoked it?",
+            options : ["import", "catch", "abstract", "this"],
+            answer : "this"
+        },
+        {
+            id : 40,
+            question : "Which function is used to perform some action when the object is to be destroyed?",
+            options : ["finalize()", "delete()", "main()", "none of the mentioned"],
+            answer : "finalize()"
+        }
+    ]
 }
 ]
 
