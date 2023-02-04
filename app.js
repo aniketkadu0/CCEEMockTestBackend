@@ -6,11 +6,16 @@ const userRoute = require("./routes/userRoute");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
+morgan.token('id', function getId (req) {
+    return req.id
+  })
+
+
 app.use(express.static('./public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
-app.use(morgan('dev'));
+app.use(morgan(':date :id :method :url :status :response-time'));
 
 app.use("/user", userRoute);
 
