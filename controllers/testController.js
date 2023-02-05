@@ -1,6 +1,7 @@
 const data = require("./data")
 const Test = require("../models/testModel");
 const User = require("../models/userModel");
+const Modules = require("../models/modules");
 
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
@@ -60,6 +61,18 @@ exports.getAttemptedTest = async (req, res) => {
     } catch (error) {
       return res.status(400).send({ error: "Unable to find tests" });
     }
+};
+
+exports.getModules = async (req, res) => {
+  try {
+      const Module = await Modules.find();
+      res.send(Module[0].modules);
+    if (!Module) {
+      return res.status(400).send({ message: "Modules not found" });
+    }
+  } catch (error) {
+    return res.status(400).send({ error: "Unable to find Modules" });
+  }
 };
 
 const createTestObj = async (req) => {

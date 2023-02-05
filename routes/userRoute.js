@@ -11,6 +11,7 @@ router.post('/login', userController.logIn);
 router.get('/data', verifyUser, userController.data);
 router.post('/addquestions', verifyUser, testController.addQuestions);
 router.get('/getquestions', verifyUser, testController.getQuestions);
+router.get('/getmodules', testController.getModules);
 router.get('/getattemptedtest', verifyUser, testController.getAttemptedTest);
 router.post('/addtest', verifyUser, testController.addTest);
 router.post('/paymentstatus',verifyUser, userController.updateUser);

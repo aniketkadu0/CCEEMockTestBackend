@@ -3925,6 +3925,278 @@ public class MainClass {
             answer : "finalize()"
         }
     ]
+},
+{
+    moduleName : "Database Technologies - test 2",
+    questions : [
+        {
+            id : 1,
+            question : "What operator tests column for the absence of data?",
+            options : ["IS NULL operator", "ASSIGNMENT operator", 
+            "LIKE operator", "NOT operator"],
+            answer : "IS NULL operator"
+        },
+        {
+            id : 2,
+            question : "The ___________ refers to the way data is organized in and accessible from DBMS.",
+            options : ["database hierarchy", "data organization", "data sharing", "data model"],
+            answer : "data model"
+        },
+        {
+            id : 3,
+            question : "How many unique keys can a table have",
+            options : ["1", "0", "2", "Multiple"],
+            answer : "Multiple"
+        },
+        {
+            id : 4,
+            question : "Dropping a table has the following effects on a non-unique created for the table",
+            options : ["No effect", "The index will be dropped", "The index will be rendered invalid", "The index will contain NULL values"],
+            answer : "The index will be dropped"
+        },
+        {
+            id : 5,
+            question : "A COMMIT statement",
+            options : ["Saves the previous changes", "Saves the changes for the current session", 
+            "Saves the changes for all sessions", "None of the above"],
+            answer : "Saves the changes for the current session"
+        },
+        {
+            id : 6,
+            question : "Which of the following statement contain an error?",
+            options : ["Select * from EMP where EMPNO = 493945;", "Select EMPNO from EMP where EMPNO = 493945;", 
+            "Select EMPNO from EMP;", "Select EMPNO where EMPNO = 56949 and LASTNAME = SMITH;"],
+            answer : "Select EMPNO where EMPNO = 56949 and LASTNAME = SMITH;"
+        },
+        {
+            id : 7,
+            question : "Choose the incorrect option related to DBMS",
+            options : ["There is no Security of data", "Not support distributed database", "satisfy more than 8 rule of Dr.E.F.Codd", "none"],
+            answer : "satisfy more than 8 rule of Dr.E.F.Codd"
+        },
+        {
+            id : 8,
+            question : "What is the maximum size of a MongoDB document",
+            options : ["2MB", "16MB", "12MB", "There is no maximum size. It depends on the RAM"],
+            answer : "16MB"
+        },
+        {
+            id : 9,
+            question : "Comments in a MySQL code are inserted using",
+            options : ["--", "/**/", "Both A & B", "#"],
+            answer : "Both A & B"
+        },
+        {
+            id : 10,
+            question : "The query associated with a cursor is executed in",
+            options : ["Declare phase", "Open phase", "Fetch phase", "Close phase"],
+            answer : "Open phase"
+        },
+        {
+            id : 11,
+            question : "Evaluate the SQL statement - SELECT ROUND (TRUNCATE (MOD (1600,10),-1),2) FROM dual, What will be displayed?",
+            options : ["0", "1", "100", "An error statement"],
+            answer : "0"
+        },
+        {
+            id : 12,
+            question : "Which of the following statements is true about while loops?",
+            options : ["Explicit exit statements are required in while loops", 
+            "Counter variables are required in while loops", 
+            "An if-then statement is needed to signal when a while loop should end", 
+            "All exit conditions for while loops are handled in the exit when clause"],
+            answer : "Counter variables are required in while loops"
+        },
+        {
+            id : 13,
+            question : "Identifiers in MySQL can contain upto _________ characters",
+            options : ["255", "30", "100", "none"],
+            answer : "30"
+        },
+        {
+            id : 14,
+            question : "In MySQL if you need to deal with a group of rows, then you must place returned data into",
+            options : ["Select Statement", "Cursors", "Into clause", "Code storage"],
+            answer : "Cursors"
+        },
+        {
+            id : 15,
+            question : "Point out the wrong statement",
+            options : ["NoSQL databases are built to allow the insertion of data without a predefined schema", 
+            "NewSQL databases are built to allow the insertion of data without a predefined schema", 
+            "Non Relational databases require that schemas be defined before you can add data", 
+            "All of the mentioned"],
+            answer : "Non Relational databases require that schemas be defined before you can add data"
+        },
+        {
+            id : 16,
+            question : "A subquery can be used to ___________",
+            options : ["create groups of data", "sort data in a specific order", 
+            "convert data to a different format", "retrieve data based on an unknown condition"],
+            answer : "retrieve data based on an unknown condition"
+        },
+        {
+            id : 17,
+            question : "Update if Correct is an approach for which of the following concepts in MongoDB.",
+            options : ["Concurrency Control", "Transaction Management", "Atomicity", "Performance Management"],
+            answer : "Concurrency Control"
+        },
+        {
+            id : 18,
+            question : "CHAR() function",
+            options : ["Accepts a number & returns the character", 
+            "Accepts a character & returns the number", 
+            "Accepts a number & returns the number", 
+            "None of the above"],
+            answer : "Accepts a number & returns the character"
+        },
+        {
+            id : 19,
+            question : "A collection and a document in MongoDB is equivalent to ___________ concepts respectively.",
+            options : ["Table and column", "Table and row", "Row and column", "Database and table"],
+            answer : "Table and row"
+        },
+        {
+            id : 20,
+            question : "Which one is a TCL (or DCL) statement?",
+            options : ["update", "TRUNCATE", "AlTER", "ROLLBACK"],
+            answer : "ROLLBACK"
+        },
+        {
+            id : 21,
+            question : "The DUAL table has",
+            options : ["One row many columns", "One column and many Rows", 
+            "One row and One Column", "Many Rows and mant columns"],
+            answer : "One row and One Column"
+        },
+        {
+            id : 22,
+            question : "To suppress the duplicate values, you can use the keyword _________",
+            options : ["Distinct", " Unique", "Either of the above", "None of the above"],
+            answer : "Either of the above"
+        },
+        {
+            id : 23,
+            question : "The MySQL blocks can contain __________ & __________ statements",
+            options : ["DML, DCL", "DML, DDL", "GRANT, REVOKE", "TCL, DML"],
+            answer : "TCL, DML"
+        },
+        {
+            id : 24,
+            question : "How should a many-to-many relationship be handled?",
+            options : ["By adding a join table", "By adding an intersection table", 
+            "By adding union table", "By adding Cartesian table"],
+            answer : "By adding an intersection table"
+        },
+        {
+            id : 25,
+            question : "You define a multiple-row subquery in the WHERE clause of an SQL query with a comparison operator '=' What happens when the main query is executed?",
+            options : ["the main query executes with the first value returned by the subquery", 
+            "the main query executes with the last value returned by the subquery", 
+            "the main query executes with all the values returned by the subquery", 
+            "The main query fails because the multiple-row subquery cannot be used with the comparison operator"],
+            answer : "The main query fails because the multiple-row subquery cannot be used with the comparison operator"
+        },
+        {
+            id : 26,
+            question : "Rollback and Commit affect",
+            options : ["Only DML statements", "Only DDL statements", "All SQL statements executed", "All of the above"],
+            answer : "Only DML statements"
+        },
+        {
+            id : 27,
+            question : "Which of the following is an invalid rollback statement in MySQL?",
+            options : ["ROLLBACK;", "ROLLBACK WORK;", "ROLLBACK TO SAVEPOINT A;", "None of the above"],
+            answer : "ROLLBACK TO SAVEPOINT A;"
+        },
+        {
+            id : 28,
+            question : "The value of INSTR('CALIFORNIA', 'A') is",
+            options : ["2", "1", "10", "9"],
+            answer : "2"
+        },
+        {
+            id : 29,
+            question : `Evaluate this SQL statement: SELECT ename, sal, 12*sal+100 FROM EMP; <br>
+            The SAL column stores the monthly salary of the emplouee. Which change must be made to the above syntax to <br>
+            calculate the annual compensation as "monthly salary plus a monthly bonus of $100, multiplied by 12?`,
+            options : ["No change is required to achieve the desired results", "SELECT ename, sal, 12*(sal+100) FROM emp;", 
+            "SELECT ename, sal, (12*sal) + 100 FROM emp;", "SELECT ename, sal+100*12 FROM emp;"],
+            answer : "SELECT ename, sal, 12*(sal+100) FROM emp;"
+        },
+        {
+            id : 30,
+            question : "Logical operator ________ has higher precedence than OR.",
+            options : ["NOT", "AND", "Both of the above", "None of the above"],
+            answer : "Both of the above"
+        },
+        {
+            id : 31,
+            question : "________ holds the definitions of all of the data tables.",
+            options : ["database", "data dictionary", "data mining", "data source"],
+            answer : "data dictionary"
+        },
+        {
+            id : 32,
+            question : "The component of SQL that is used for granting and revoking privileges is known as",
+            options : ["DDL", "DML", "DCL", "DQL"],
+            answer : "DCL"
+        },
+        {
+            id : 33,
+            question : "The ________ operator is used for pattern matching.",
+            options : ["Distinct", "Like", "Group By", "Order By"],
+            answer : "Like"
+        },
+        {
+            id : 34,
+            question : "________ makes a string of certain length by adding a certain set of characters to the left",
+            options : ["LTRIM", "LPAD", "SUBSTR", "INSTR"],
+            answer : "LPAD"
+        },
+        {
+            id : 35,
+            question : "When we combine multiple columns in a single index, it is known as a __________ index.",
+            options : ["Composite", "Multiple", "Multicol", "Complicated"],
+            answer : "Composite"
+        },
+        {
+            id : 36,
+            question : "___________ is compulsory section of a MySQL block",
+            options : ["Declaration section marked by the keyword DECLARE", "Executable section marked by the keyword BEGIN ____ END", 
+            "Exception section marked by the keyword EXCEPTION", "All of the above"],
+            answer : "Executable section marked by the keyword BEGIN ____ END"
+        },
+        {
+            id : 37,
+            question : "Omitting the WHERE clause from a DELETE statement has which of the following effects?",
+            options : ["The delete statement will fail because there are no records to delete", 
+            "The delete statement will prompt the used to enter the criteria for the deletion", 
+            "The delete statement will fail because of syntax error", 
+            "The delete statement will remove all records from the table"],
+            answer : "The delete statement will remove all records from the table"
+        },
+        {
+            id : 38,
+            question : "________ loop if used properly can be used to ensure that the statements whithin the loop are executed iteratively but at least once.",
+            options : ["Repeat", "While loop ..... end loop;", 
+            "for l in 1..10 loop ... end loop;", "All of the above"],
+            answer : "Repeat"
+        },
+        {
+            id : 39,
+            question : "Which describes the default behaviour when you create a table?",
+            options : ["The table is accessible to all users.", "Tables are created in the public schema.", 
+            "Tables are created in your schema.", "Tables are created in the DBA schema."],
+            answer : "Tables are created in your schema."
+        },
+        {
+            id : 40,
+            question : "What kind of database MongoDB is?",
+            options : ["Graph Oriented", "Document Oriented", "Key Value Pair", "Column Based"],
+            answer : "Document Oriented"
+        }
+    ]
 }
 ]
 
