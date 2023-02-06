@@ -3194,7 +3194,7 @@ class Program
             id : 8,
             question : "__________ is a tool for automating testing web applications & Interacts directly with the browser and uses the browser's engine to control it.",
             options : ["Selenuim", "WebDriver", "jUnit", "JIRA"],
-            answer : ""
+            answer : "Selenuim"
         },
         {
             id : 9,
@@ -3296,7 +3296,7 @@ class Program
             id : 24,
             question : "In WebDriver, __________ command can be used to enter values onto text boxes?",
             options : ["selenium.type()", "type()", `sendKeys("text")`, `driver.type("text")`],
-            answer : ""
+            answer : `sendKeys("text")`
         },
         {
             id : 25,
