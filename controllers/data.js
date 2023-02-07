@@ -4203,7 +4203,7 @@ public class MainClass {
     questions : [
         {
             id : 1,
-            question : "What is the attribute for <xmp><image><xmp> tag?",
+            question : "What is the attribute for <xmp><image></xmp> tag?",
             options : ["pt", "url", "path", "src"],
             answer : "src"
         },
