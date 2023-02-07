@@ -4504,6 +4504,316 @@ Msg = function() {
             answer : "$"
         }
     ]
+},
+{
+    moduleName : "Algorithms and Data Structures (Using Java) - test 2",
+    questions : [
+        {
+            id : 1,
+            question : "Which of the following sorting algorithms in its typical implementation gives best performance when applied on an array which is sorted or almost sorted (maximum 1 or two elements are misplaced).",
+            options : ["Quick Sort", "Heap Sort", "Merge Sort", "Insertion sort"],
+            answer : "Insertion sort"
+        },
+        {
+            id : 2,
+            question : "What is the best time complexity of bubble sort?",
+            options : ["O(n)^2", "O(n) log n", "O(n)", "O(n) (Log n)^2"],
+            answer : "O(n)"
+        },
+        {
+            id : 3,
+            question : "Consider a situation where swap operation is very costly. Which of the following sorting algorithms should be preferred so that the number of swap operations are minimized in general?",
+            options : ["Heap Sort", "Selection sort", "Insertion sort", "Merge sort"],
+            answer : "Selection sort"
+        },
+        {
+            id : 4,
+            question : "Which of the following algorithm design technique is used in Quick sort?",
+            options : ["Greedy method", "Backtracking", "Dynamic programming", "Divide and Conquer"],
+            answer : "Divide and Conquer"
+        },
+        {
+            id : 5,
+            question : "Selection sort algorithm design technique is an example of",
+            options : ["Greedy Method", "Divide and Conquer", "Dynamic programming", "Backtracking"],
+            answer : "Greedy Method"
+        },
+        {
+            id : 6,
+            question : "The result of evaluating postfix expression 539*74-/+62*- is",
+            options : ["16", "2", "-7", "3"],
+            answer : "2"
+        },
+        {
+            id : 7,
+            question : "What would be the time complexity of push and pop operation if, the stack implementated using linked list?",
+            options : ["O(1) for insertion O(n) for deletion", "O(1) for insertion O(1) for deletion", 
+            "O(n) for insertion O(1) for deletion", "O(n) for insertion O(n) for deletion"],
+            answer : "O(1) for insertion O(1) for deletion"
+        },
+        {
+            id : 8,
+            question : `If one dimentional array A[MAXSIZE] is used to implement two stacks provided two stacks grow from opposite ends of the array. Variables top1 and top2 (top1 < top 2) 
+            point to the location of the topmost element in each of the stacks, then which of the followings stetements must be true? <br>
+            I. If the space is to be used efficiently, the condition for stack full is top1= top2 -1 <br>
+            II. The condition for stack full is top1 + top2 = MAXSIZE`,
+            options : ["Only I is true", "Only II is true", "Both I and II are true", "Both I and II are false"],
+            answer : "Only I is true"
+        },
+        {
+            id : 9,
+            question : "The ____________ data structure is used to check whether an arithmetic expression has balanced parenthesis or not",
+            options : ["Queue", "List", "Tree", "Stack"],
+            answer : "Stack"
+        },
+        {
+            id : 10,
+            question : "Which of the following is the disadvantage of the array?",
+            options : ["If user wishes to store multiple values of similar type then the Array can be used and utilized efficiently.", 
+            "In arrays, the elements can be accessed randomly by using the index number.", 
+            "Insertion and deletion are quite difficult in an array as the elements are stored in consecutive memory locations and the shifting operation is costly.", 
+            "Arrays allocate memory in contiguous memory locations for all its elements."],
+            answer : "Insertion and deletion are quite difficult in an array as the elements are stored in consecutive memory locations and the shifting operation is costly."
+        },
+        {
+            id : 11,
+            question : "Which one of the following is an application of Queue Data Structure?",
+            options : ["Spooling in printers", "Queues in routers/ switches", "Both of the above", "Evaluation of Arithmetic Expressions"],
+            answer : "Both of the above"
+        },
+        {
+            id : 12,
+            question : "Which of the following is true about linked list implementation of queue?",
+            options : ["In push operation, if new nodes are inserted at the beginning of linked list, then in pop operation, nodes must be removed from end.", 
+            "In push operation, if new nodes are inserted at the end of linked list, then in pop operation, nodes must be removed from beginning.", 
+            "Queue data structure can be used to implement least recently used (LRU) page fault algorithm and Quick short algorithm.", 
+            "All of the above"],
+            answer : "All of the above"
+        },
+        {
+            id : 13,
+            question : `Consider the following pseudo code. Assume that IntQueue is an integer queue. What does the function fun do?
+<pre class="language-java"><code>  
+void fun(int n)
+{
+    IntQueue q = new IntQueue();
+    q.enqueue(0);
+    q.enqueue(1);
+    for (int i = 0; i < n; i++)
+    {
+        int a = q.dequeue();
+        int b = q.dequeue();
+        q.enqueue(b);
+        q.enqueue(a + b);
+        print(a);
+    }
+}        
+</code></pre>`,
+            options : ["Prints numbers from 0 to n-1", "Prints numbers from n-1 to 0", 
+            "Prints first n Fibonacci numbers", "Prints first n Fibonacci numbers in reverse order."],
+            answer : "Prints first n Fibonacci numbers"
+        },
+        {
+            id : 14,
+            question : "________ is an abstract data type that generalizes a queue, for which elements can be added to or removed from either the front or rear end",
+            options : ["Double ended queue", "Deque", "Both of the above", "Deck"],
+            answer : "Both of the above"
+        },
+        {
+            id : 15,
+            question : "What will be queue full condition for circular queue if implemented using static array, provided rear and front are initially -1?",
+            options : ["rear==SIZE", "rear==SIZE-1", "(rear+1)%size==front", "None of the above"],
+            answer : "(rear+1)%size==front"
+        },
+        {
+            id : 16,
+            question : `Which of the following statement is true about the complete binary tree? <br>
+            I. In complete binary tree, every level must be filled from left to right direction <br>
+            II. Every full binary tree can be considered as a complete binary tree but reverse is not true`,
+            options : ["Only I is true", "Only II is true", "Both I and II are true", "None of the above"],
+            answer : "Both I and II are true"
+        },
+        {
+            id : 17,
+            question : "Which one of the following is an application of Graph Data Structure?",
+            options : ["Electronic circuit simulation", "Path Optimization Algorithms.", 
+            "Scientific Computations", "All of the above"],
+            answer : "All of the above"
+        },
+        {
+            id : 18,
+            question : "In binary tree if non-leaf node has non-empty left sub-tree and non-empty right sub-tree then such binary tree is called as _________",
+            options : ["Strictly binary tree", "Complete binary tree", "Full binary tree", "Skewed binary tree"],
+            answer : "Strictly binary tree"
+        },
+        {
+            id : 19,
+            question : "Suppose the numbers 80 110 120 60 40 70 90 100 85 are inserted in that order into an initially empty binary search tree. The binary search tree uses the usual ordering on natural numbers. What is the in-order traversal sequence of the resultant tree?",
+            options : ["80 60 40 70 110 90 85 100 120", 
+            "40 60 70 80 85 90 100 110 120", 
+            "40 70 60 85 100 90 120 110 80", 
+            "40 60 70 85 90 100 110 120 80"],
+            answer : "40 60 70 80 85 90 100 110 120"
+        },
+        {
+            id : 20,
+            question : "Given an undirected graph G with 5 vertices and 7 edges, the sum of the degrees of all vertices is:",
+            options : ["7", "5", "10", "14"],
+            answer : "14"
+        },
+        {
+            id : 21,
+            question : "what would be the number of zeros in the adjacency matrix of given graph?",
+            options : ["10", "6", "16", "0"],
+            answer : "10"
+        },
+        {
+            id : 22,
+            question : "How many undirected graphs (not necessarily connected) can be constructed out of a given set V = {v1, v2, ... vn} of n vertices?",
+            options : ["n(n-1)/2", "2^n", "n!", "2^n(n-1)/2"],
+            answer : "2^n(n-1)/2"
+        },
+        {
+            id : 23,
+            question : "Which of the following statement is correct about flow chart and a pseudocode?",
+            options : ["A flowchart is a diagram while the pseudo code is written in any programming language", 
+            "A flowchart is textual but the pseudocode is a diagram", 
+            "A flowchart is a schematic description of an algorithm, while pseudo-code is a textual description of an algorithm", 
+            "A flowchart and a pseudo-code are the same"],
+            answer : "A flowchart is a schematic description of an algorithm, while pseudo-code is a textual description of an algorithm"
+        },
+        {
+            id : 24,
+            question : "Which of the following is advantage of linked-list over array?",
+            options : ["Inserting a new element in an linked-list of elements is easy as compared to array.", 
+            "The size of linked-list is fixed", 
+            "Extra memory space for a pointer is required with each element of the list", 
+            "Random access is not allowed."],
+            answer : "Inserting a new element in an linked-list of elements is easy as compared to array."
+        },
+        {
+            id : 25,
+            question : `Which of the following statement(s) is TRUE? <br>
+            I. A hash function takes a message of arbitrary length and generates a fixed length code. <br>
+            II. A hash function takes a message of fixed length and generates a code of variable length. <br>
+            III. A hash function may give the same hash value for distinct messages.`,
+            options : ["Only I", "Both II and III", "Both I and III", "Only II"],
+            answer : "Both I and III"
+        },
+        {
+            id : 26,
+            question : `Which of the following statement(s) is/are correct regarding Bellman-Ford shortest path algorithm? <br>
+            I. Always finds a negative weighted cycle, if one exists. <br>
+            II. Finds whether any negative weighted cycle is reachable from the source.`,
+            options : ["Only I", "Both I and II", "Only II", "None of the above"],
+            answer : "Only II"
+        },
+        {
+            id : 27,
+            question : "Merge Sort works on two principles",
+            options : ["To sort smaller size array and to merge two already sorted array operations are not efficient.", 
+            "To sort smaller size array and to merge two already sorted array operations are efficient.", 
+            "To sort smaller size array is efficient and to merge two already sorted array is not efficient.", 
+            "To sort smaller size array is not efficient and to merge two already sorted array is efficient."],
+            answer : "To sort smaller size array and to merge two already sorted array operations are efficient."
+        },
+        {
+            id : 28,
+            question : "How many pointers need to modify to insert any element at the front of the singly linear linked-list.",
+            options : ["1", "2", "3", "4"],
+            answer : "2"
+        },
+        {
+            id : 29,
+            question : "Dijkstra's Algorithm cannot be applied on _________",
+            options : ["Directed and weighted graphs", "Graphs having negative weight function", 
+            "Unweighted graphs", "Undirected and unweighted graphs"],
+            answer : "Graphs having negative weight function"
+        },
+        {
+            id : 30,
+            question : "What is the worst case time complexity of traversal of doubly linked list ?",
+            options : ["O(1)", "O(logn)", "O(n)", "O(nlogn)"],
+            answer : "O(n)"
+        },
+        {
+            id : 31,
+            question : "In the worst case, the number of comparisons needed to search a singly linked list of length n for a given element is",
+            options : ["log(n)", "n", "n/2", "None of the above"],
+            answer : "n"
+        },
+        {
+            id : 32,
+            question : "Which of the following is/are advantages of cicular linked list?",
+            options : ["We can traverse the whole list by starting from any point. We just need to stop when the first visited node is visited again.", 
+            "Circular Doubly Linked Lists are used for implementation of advanced data structures like Fibonacci Heap.", 
+            "Only first option", 
+            "Both first and second option"],
+            answer : "Only first option"
+        },
+        {
+            id : 33,
+            question : "The time required to search an element in a linked list of length n is",
+            options : ["O(log n)", "O(n)", "O(1)", "O(n^2)"],
+            answer : "O(n)"
+        },
+        {
+            id : 34,
+            question : "Is it possible to add node before specified node in a singly linked list?",
+            options : ["Not possible", "yes, possible but need to traverse the corresponding list twice.", 
+            "yes, possible by adding node after specified position and then by swapping the position.", 
+            "Both second and third option"],
+            answer : "yes, possible by adding node after specified position and then by swapping the position."
+        },
+        {
+            id : 35,
+            question : "Which of the following is suitable data structure to implement priority queue?",
+            options : ["Graph", "Heap data structure", "Linked List", "Both first and second options"],
+            answer : "Both first and second options"
+        },
+        {
+            id : 36,
+            question : "Which of the following are application of linked list?",
+            options : ["It is used in the navigational systems where front and back navigation is required", 
+            "To implement stacks and queues", 
+            "To implement Hash tables", 
+            "All of the above"],
+            answer : "All of the above"
+        },
+        {
+            id : 37,
+            question : "Which of the following asymptotic notation is used represent lower bound?",
+            options : ["Big-Oh (O) Notation", "Big-Omega (Ω) notation", 
+            "Big-Theta(Θ) notation", "None of the above"],
+            answer : "Big-Omega (Ω) notation"
+        },
+        {
+            id : 38,
+            question : "Prim's algorithm is a............",
+            options : ["Divide and conquer algorithm", "Greedy algorithm", 
+            "Dynamic programming", "Approximation algorithm"],
+            answer : "Greedy algorithm"
+        },
+        {
+            id : 39,
+            question : `Consider the following AVL tree. <br>
+  60 <br>
+ /  \ <br>
+20  100 <br>
+    / \ <br>
+   80  120 <br>
+Which of the following operation need to do after insertion of 70?`,
+            options : ["Rotate right and rotate left", "Rotate left and rotate right", 
+            "Need to Rotate left twice", "Need to Rotate right twice"],
+            answer : "Rotate right and rotate left"
+        },
+        {
+            id : 40,
+            question : "The type of expression in which operator succeeds its operands is?",
+            options : ["Infix Expression", "pre fix Expression", "postfix Expression", "None"],
+            answer : "postfix Expression"
+        }
+    ]
 }
 ]
 
