@@ -4797,11 +4797,7 @@ void fun(int n)
         {
             id : 39,
             question : `Consider the following AVL tree. <br>
-  60 <br>
- /  \ <br>
-20  100 <br>
-    / \ <br>
-   80  120 <br>
+<img class = 'mt-3' src='https://cceestudy.online/images/tests/tree1.jpg' style='width : 100%;' />
 Which of the following operation need to do after insertion of 70?`,
             options : ["Rotate right and rotate left", "Rotate left and rotate right", 
             "Need to Rotate left twice", "Need to Rotate right twice"],
