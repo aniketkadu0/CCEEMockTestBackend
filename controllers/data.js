@@ -1934,7 +1934,7 @@ const arr = [10,20,30];  arr.push(40);  console.log(arr); //line 2
             question : "How to change color to red of p tag having id text using jQuery?",
             options : ["$('#text').color('red')", "$('.text').css('color','red')", 
             "$('#text').css('color','red')", "$('p').css('color','red')"],
-            answer : "$('.text').css('color','red')"
+            answer : "$('#text').css('color','red')"
         },
         {
             id : 31,
@@ -2017,7 +2017,7 @@ what response will be shown?`,
             id : 38,
             question : "Third-party packages can be install/update/delete using ______",
             options : ["Node Package Manager", "Node.exe", "module.exports", "REPL"],
-            answer : ""
+            answer : "Node Package Manager"
         },
         {
             id : 39,
@@ -4195,6 +4195,313 @@ public class MainClass {
             question : "What kind of database MongoDB is?",
             options : ["Graph Oriented", "Document Oriented", "Key Value Pair", "Column Based"],
             answer : "Document Oriented"
+        }
+    ]
+},
+{
+    moduleName : "Web Programming Technologies - test 2",
+    questions : [
+        {
+            id : 1,
+            question : "What is the attribute for <image> tag?",
+            options : ["pt", "url", "path", "src"],
+            answer : "src"
+        },
+        {
+            id : 2,
+            question : "Each list item in an ordered or unordered list has which tag?",
+            options : ["list tag", "ls tag", "li tag", "ol tag"],
+            answer : "li tag"
+        },
+        {
+            id : 3,
+            question : "What are <div> tags used for?",
+            options : ["To replace paragraphs. i.e. p tags", 
+            "To logically divide the paragraphs", 
+            "To logically divide the document", 
+            "To provide space between tables"],
+            answer : "To logically divide the document"
+        },
+        {
+            id : 4,
+            question : "What attribute is used to specify number of rows?",
+            options : ["Rownum", "Rownumb", "rn", "Rowspan"],
+            answer : "Rowspan"
+        },
+        {
+            id : 5,
+            question : "What are meta tags used for?",
+            options : ["To store information usually relevant to browsers and search engines.", 
+            "To only store information usually relevant to browsers", 
+            "To only store information about search engines.", 
+            "To store information about external links"],
+            answer : "To store information usually relevant to browsers and search engines."
+        },
+        {
+            id : 6,
+            question : "Which machine actually executes the Java Script?",
+            options : ["The web server", "The machine which is running a web browser", 
+            "Java Script engine", "Both A and C"],
+            answer : "The machine which is running a web browser"
+        },
+        {
+            id : 7,
+            question : `Which of the following is correct to write "Hello World" on the web page?`,
+            options : [`System.out.println("Hello World")`, 
+            `print("Hello World")`, 
+            `document.write("Hello World")`, 
+            `response.write("Hello World")`],
+            answer : `document.write("Hello World")`
+        },
+        {
+            id : 8,
+            question : "Which of the following is the correct way for writing Java Script array?",
+            options : ["var salaries = new Array( 1:39438, 2:39839 3:83729)", 
+            "var salaries = new (Array:1=39438, Array:2=39839, Array:3=83729)", 
+            "var salaries = new Array(39438,39839,83729)", 
+            "var salaries = new Array() values=39438,39839,83729"],
+            answer : "var salaries = new Array(39438,39839,83729)"
+        },
+        {
+            id : 9,
+            question : "How does Java Script store dates in objects of Date type?",
+            options : ["The number of days since January 1st, 1900", 
+            "The number of seconds since January 1st, 1970", 
+            "The number of milliseconds since January 1st, 1970", 
+            "The number of picoseconds since January 1st, 1970"],
+            answer : "The number of milliseconds since January 1st, 1970"
+        },
+        {
+            id : 10,
+            question : "Which of the following statements are true for Java script?",
+            options : ["JavaScript is case sensitive", 
+            "JavaScript statements can be grouped together in blocks", 
+            "semicolon at the end of statement is mandatory", 
+            "Both a and b above"],
+            answer : "Both a and b above"
+        },
+        {
+            id : 11,
+            question : "React is a _________",
+            options : ["Web development Framework", 
+            "JavaScript Library", 
+            "jQuery", 
+            "Web Server"],
+            answer : "JavaScript Library"
+        },
+        {
+            id : 12,
+            question : "Which ReactJS function renders HTML to the web page?",
+            options : ["render()", "ReactDOM.render()", 
+            "renders()", "ReactDOM.renders()"],
+            answer : "ReactDOM.render()"
+        },
+        {
+            id : 13,
+            question : "JSX stands for _____.",
+            options : ["JSON", "JSON XML", "JavaScript XML", "JavaScript and AngularJS"],
+            answer : "JavaScript XML"
+        },
+        {
+            id : 14,
+            question : "JSX allows us to write _____.",
+            options : ["jQuery in React", "Angular Code in React", "MySQL in React", "HTML in React"],
+            answer : "HTML in React"
+        },
+        {
+            id : 15,
+            question : "What is the correct syntax to write expression in JSX?",
+            options : ["[ expression ]", "{ expression }", "{{ expression }}", "_expression"],
+            answer : "{ expression }"
+        },
+        {
+            id : 16,
+            question : "A class component must include the _______ statement.",
+            options : ["extends React.Component", "extends React", "extends Component", "extends React.Component.All"],
+            answer : "extends React.Component"
+        },
+        {
+            id : 17,
+            question : "What are Props?",
+            options : ["Props are arguments passed into React components", 
+            "Props are functions in the ReactJS", 
+            "Props are used to returns multiple values from the function", 
+            "All of the above"],
+            answer : "Props are arguments passed into React components"
+        },
+        {
+            id : 18,
+            question : "What does props stand for?",
+            options : ["Proper Arguments", "Properties", "Proper Return Values", "All of the above"],
+            answer : "Properties"
+        },
+        {
+            id : 19,
+            question : "Which ReactJS command is used to create a new application?",
+            options : ["create-react-app", "new-react-app", "create-new-reactapp", "react-app"],
+            answer : "create-react-app"
+        },
+        {
+            id : 20,
+            question : `Consider the below function - which is the correct syntax of arrow function?
+<pre class="language-javaScript"><code>
+Msg = function() {
+    return "Good Morning";
+}  
+</code></pre>`,
+            options : [`Msg = () => {return "Good Morning";}`, 
+            `Msg = () => "Good Morning";`, 
+            "Both of the above", 
+            "None of the above"],
+            answer : "Both of the above"
+        },
+        {
+            id : 21,
+            question : "Which method is used to generate lists?",
+            options : ["map()", "generate()", "new()", "maps()"],
+            answer : "map()"
+        },
+        {
+            id : 22,
+            question : "What are components in ReactJS?",
+            options : ["Components are like functions that return HTML elements.", 
+            "Components are the HTML elements.", 
+            "Components are the set of variables defined in ReactJS.", 
+            "None of the above"],
+            answer : "Components are like functions that return HTML elements."
+        },
+        {
+            id : 23,
+            question : "Which method is used to make an asynchronous HTTP request?",
+            options : ["jQuery.ajaxAsync()", "jQuery.async()", 
+            "jQuery.ajax()", "None of the above"],
+            answer : "jQuery.ajax()"
+        },
+        {
+            id : 24,
+            question : "AJAX and jQuery",
+            options : ["With jQuery AJAX, you can request TXT, HTML, XML or JSON data from a remote server using both HTTP Get and HTTP Post", 
+            "jQuery provides a rich set of methods (functions) for AJAX web development", 
+            "AJAX and jQuery are cross-platform (you can develop in Windows and serve on a Unix platform)", 
+            "First two statements"],
+            answer : "First two statements"
+        },
+        {
+            id : 25,
+            question : "Which of the following is true about RESTful web services?",
+            options : ["Web services based on REST architecture are known as RESTful web services", 
+            "Web services uses HTTP methods to implement the concept of REST architecture",
+            "Both of the above", 
+            "None of the above"],
+            answer : "Both of the above"
+        },
+        {
+            id : 26,
+            question : "Which of the following types of applications can be built using Node.js?",
+            options : ["Web Application", "Chat Application", "RESTful Service", "All of the above"],
+            answer : "All of the above"
+        },
+        {
+            id : 27,
+            question : `Consider the following code from React Route, What do you call:id in the path prop? <br><Route path="/:id" />`,
+            options : ["This is a route modal", "This is a route parameter", "This is a route splitter", "This is a route link"],
+            answer : "This is a route parameter"
+        },
+        {
+            id : 28,
+            question : "Why might you use useReducer over useState in React component?",
+            options : ["When you need to manage more complex state in an app", 
+            "When you want to replace redux", 
+            "When you want to improve performance", 
+            "When you want to break your production app"],
+            answer : "When you need to manage more complex state in an app"
+        },
+        {
+            id : 29,
+            question : "What do you call a React component that catches JavaScript errors anywhere in the child component tree?",
+            options : ["error bosses", "error catchers", "error helpers", "error boundaries"],
+            answer : "error boundaries"
+        },
+        {
+            id : 30,
+            question : "The _________ specifies whether a border should be solid, dashed line, doted line, double line, groove etc.",
+            options : ["border-layout", "border-decoration", 
+            "border-style", "border-weight"],
+            answer : "border-style"
+        },
+        {
+            id : 31,
+            question : "Linking to another place in the same or another web page requires two A (Anchor) tags, the first with the _________ attribute and the second the __________ attribute.",
+            options : ["NAME & LINK", "LINK & HREF", "HREF & NAME", "TARGET & VALUE"],
+            answer : "HREF & NAME"
+        },
+        {
+            id : 32,
+            question : "How does the identity operator === compare two values?",
+            options : ["It converts them to a common compatible data type and then compares the resulting values", 
+            "It returns True only if they are both of the same type and value", 
+            "If the two values are strings, it performs a lexical comparison", 
+            "It bases its comparison on the C strcmp function exclusively"],
+            answer : "It converts them to a common compatible data type and then compares the resulting values"
+        },
+        {
+            id : 33,
+            question : "When developers fail to protect their users sensitive information such as user names, passwords, and session tokens there is a possibility of _________",
+            options : ["SQL Injection", "Insecure Direct Object Reference", 
+            "Cross-Site Request Forgery", "Broken Authentication and Session Management"],
+            answer : "Cross-Site Request Forgery"
+        },
+        {
+            id : 34,
+            question : "CSRF is stand for",
+            options : ["Cross-Site Request Forgery", "Cross script format", 
+            "Cascading script format", "Cross site required format"],
+            answer : "Cross-Site Request Forgery"
+        },
+        {
+            id : 35,
+            question : "Which of the following is correct about Bootstrap?",
+            options : ["Bootstrap is a sleek, intuitive, and powerful, mobile first front-end framework for faster andeasier web development.", 
+            "It uses HTML, CSS and Javascript.", 
+            "Bootstrap was developed by Mark Otto and Jacob Thornton at Twitter.", 
+            "All of the above."],
+            answer : "All of the above."
+        },
+        {
+            id : 36,
+            question : "Which of the following is correct about Bootstrap Grid System?",
+            options : ["Predefined grid classes like .row and .col-xs-4 are available for quickly making grid layouts. LESSmixins can also be used for more semantic layouts.", 
+            "Columns create gutters (gaps between column content) via padding. That padding is offset inrows for the first and the last column via negative margin on .rows.", 
+            "Grid columns are created by specifying the number of twelve available columns you wish tospan. For example, three equal columns would use three .col-xs-4.", 
+            "All of the above."],
+            answer : "All of the above."
+        },
+        {
+            id : 37,
+            question : "In Nodejs how node based web servers differ from traditional web servers?",
+            options : ["Node based server uses a single threaded model and can serve much larger number of requests compared to any traditional server like Apache HTTP Server.", 
+            "Node based server uses a single threaded model and can serve much larger number of requests compared to any traditional server like Apache HTTP Server.", 
+            "There is no much difference between the two.", 
+            "All of the above"],
+            answer : "Node based server uses a single threaded model and can serve much larger number of requests compared to any traditional server like Apache HTTP Server."
+        },
+        {
+            id : 38,
+            question : "Which of the following class is used to create and consume custom events in Node.js?",
+            options : ["EventEmitter", "Events", "NodeEvent", " None of the above"],
+            answer : "EventEmitter"
+        },
+        {
+            id : 39,
+            question : "The Node.js modules can be exposed using",
+            options : ["module.expose", "module", "module.exports", "All of the above"],
+            answer : "module.exports"
+        },
+        {
+            id : 40,
+            question : "Which sign is used to define/access jQuery?",
+            options : ["$", ".", "&", "#"],
+            answer : "$"
         }
     ]
 }
