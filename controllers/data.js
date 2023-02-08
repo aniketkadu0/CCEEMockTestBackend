@@ -3738,7 +3738,7 @@ public class Equals{
             id : 21,
             question : `What will be the output of this code:
 <pre class="language-java"><code>
-String x = 'xyz';
+String x = "xyz";
 x.toUpperCase();
 String y = x.replace('Y', 'y');
 y = y + "abc";
@@ -4808,6 +4808,344 @@ Which of the following operation need to do after insertion of 70?`,
             question : "The type of expression in which operator succeeds its operands is?",
             options : ["Infix Expression", "pre fix Expression", "postfix Expression", "None"],
             answer : "postfix Expression"
+        }
+    ]
+},
+{
+    moduleName : "Microsoft .Net Technologies - test 2",
+    questions : [
+        {
+            id : 1,
+            question : `Which of the following are valid .NET CLR JIT performance counters? <br>
+            1.Total memory used for JIT compilation <br>
+            2.Average memory used for JIT compilation <br>
+            3.Number of methods that failed to compile with the standard JIT <br>
+            4.Percentage of processor time spent performing JIT compilation <br>
+            5.Percentage of memory currently dedicated for JIT compilation <br>`,
+            options : ["1, 5", "3, 4", "1, 2", "4, 5"],
+            answer : "3, 4"
+        },
+        {
+            id : 2,
+            question : "Which of the following .NET components can be used to remove unused references from the managed heap?",
+            options : ["Common Language Infrastructure", "CLR", 
+            "Garbage Collector", "CTS"],
+            answer : "Garbage Collector"
+        },
+        {
+            id : 3,
+            question : `There are the following Jobs given below, which of them are done by Common Language Runtime? <br>
+            1. CLR provides garbage collection. <br>
+            2. CLR enforces type safety strictly. <br>
+            3. CLR provides memory and thread management. <br>
+            4. CLR provides Code Access Security.`,
+            options : ["1, 2", "3, 4", "All (1, 2, 3, 4)", "None of these"],
+            answer : "All (1, 2, 3, 4)"
+        },
+        {
+            id : 4,
+            question : "There are the following assemblies given below, which of them can be stored in GAC (Global Assembly Cache)?",
+            options : ["Public Assembly", "Private Assembly", 
+            "Protected Assembly", "Shared Assembly"],
+            answer : "Shared Assembly"
+        },
+        {
+            id : 5,
+            question : "Which of the following is the root of the .NET type hierarchy?",
+            options : ["System.Object", "System.Type", "System.Base", "System.Root"],
+            answer : "System.Object"
+        },
+        {
+            id : 6,
+            question : "Which of the following is NOT an Arithmetic operator in C#.NET?",
+            options : ["**", "+", "/", "*"],
+            answer : "**"
+        },
+        {
+            id : 7,
+            question : "Which of the following statements is correct?",
+            options : ["A constructor can be used to set default values and limit instantiation.", 
+            "C# provides a copy constructor.", 
+            "Destructors are used with classes as well as structures.", 
+            "A class can have more than one destructor."],
+            answer : "A constructor can be used to set default values and limit instantiation."
+        },
+        {
+            id : 8,
+            question : `Which of the following statements are correct about static functions? <br>
+            1.	Static functions can access only static data. <br>
+            2.	Static functions cannot call instance functions. <br>
+            3.	It is necessary to initialize static data. <br>
+            4.	Instance functions can call static functions and access static data. <br>
+            5.	this reference is passed to static functions.`,
+            options : ["1, 2, 4", "2, 3, 5", "3, 4", "4, 5"],
+            answer : "1, 2, 4"
+        },
+        {
+            id : 9,
+            question : `Which of the following will be the correct output for the C#.NET code snippet given below? <br>
+            String s1 = "Nashik"; <br>
+            String s2; <br>
+            s2 = s1.Insert(6, "Mumbai"); <br>
+            Console.WriteLine(s2);`,
+            options : ["NashiMumbair", "NashikMumbai", "Mumbai", "Nashik"],
+            answer : "NashikMumbai"
+        },
+        {
+            id : 10,
+            question : "How many times can a constructor be called during lifetime of the object?",
+            options : ["As many times as we call it.", "Only once.", 
+            "Depends upon a Project Setting made in Visual Studio.NET.", "Any number of times before the object gets garbage collected."],
+            answer : "Only once."
+        },
+        {
+            id : 11,
+            question : "The variables in __________ access means they are accessible only from within their declaration context, including any nested procedures.",
+            options : ["Protected", "Friend", "Protected Friend", "Private"],
+            answer : "Private"
+        },
+        {
+            id : 12,
+            question : "C# has _______ operator, useful for making two way decisions.",
+            options : ["Looping", "Functional", "Exponential", "Conditional"],
+            answer : "Conditional"
+        },
+        {
+            id : 13,
+            question : "We use _________ to fully abstract a class from its implimentation.",
+            options : ["Interfaces", "Objects", "Packages", "Function Definitions"],
+            answer : "Interfaces"
+        },
+        {
+            id : 14,
+            question : "What is the full form of LINQ?",
+            options : ["Local Integration Query", "Language Integrated Query", 
+            "Language Included Query", "None of the above"],
+            answer : "Language Integrated Query"
+        },
+        {
+            id : 15,
+            question : "Which among the given classes is present in System.Collection.Generic namespace?",
+            options : ["Stack", "Tree", "Sorted Array", "All of the mentioned"],
+            answer : "Stack"
+        },
+        {
+            id : 16,
+            question : "________ represents the ordered collection of an object that can be indexed individually.",
+            options : ["ArrayList", "BitArray", "Stack", "SortedList"],
+            answer : "ArrayList"
+        },
+        {
+            id : 17,
+            question : "To generate a simple notification for an object in runtime, the programming construct to be used for implementing this idea?",
+            options : ["namespace", "interface", "delegate", "attribute"],
+            answer : "delegate"
+        },
+        {
+            id : 18,
+            question : "What is the value returned by function compareTo( ) if the invoking string is less than the string compared?",
+            options : ["Zero", "A value of less than zero", "A value greater than zero", "None of the mentioned"],
+            answer : "A value of less than zero"
+        },
+        {
+            id : 19,
+            question : "The exception classes in C# are mainly directly or indirectly derived from the ________ ?",
+            options : ["System.Exception class", "Exception class", "System.ApplicationException class", "ApplicationException class"],
+            answer : "System.Exception class"
+        },
+        {
+            id : 20,
+            question : "Assume 2 columns named as Product and Category how can be both sorted out based on first by category and then by product name?",
+            options : ["var sortedProds = _db.Products.Orderby(c => c.Category)", 
+            "var sortedProds = _db.Products.Orderby(c => c.Category) + ThenBy(n => n.Name)", 
+            "var sortedProds = _db.Products.Orderby(c => c.Category) . ThenBy(n => n.Name)", 
+            "all of the mentioned"],
+            answer : "var sortedProds = _db.Products.Orderby(c => c.Category) . ThenBy(n => n.Name)"
+        },
+        {
+            id : 21,
+            question : `Which of the following will be the correct output for the C#.NET code snippet given below?
+<pre class="language-java"><code>  
+enum color : int
+{
+    red = -3,
+    green,
+    blue 
+}
+Console.Write( (int) color.red + ", "); 
+Console.Write( (int) color.green + ", "); 
+Console.Write( (int) color.blue );       
+</code></pre>`,
+            options : ["-3, -2, -1", "-3, 0, 1", "0, 1, 2", "red, green, blue"],
+            answer : "-3, -2, -1"
+        },
+        {
+            id : 22,
+            question : `Which of the following statements is correct about the C#.NET program given below if a value "6" is input to it?
+<pre class="language-java"><code>  
+using System;
+namespace ConsoleApplication
+{
+    class MyProgram
+    {
+        static void Main (string[] args)
+        {
+            int index; 
+            int val = 66; 
+            int[] a = new int[5]; 
+            try
+            {
+                Consote.Write("Enter a number: "); 
+                index = Convert.ToInt32(Console.ReadLine()); 
+                a[index] = val;
+            }
+            catch(Exception e)
+            {
+                Console.Write("Exception occurred ");
+            }
+            Console.Write("Remaining program ");
+        }
+    }
+}
+</code></pre>`,
+            options : ["It will output: Exception occurred", "It will output: Remaining program", 
+            "It will output: Exception occurred Remaining program", "It will output: Remaining program Exception occurred"],
+            answer : "It will output: Exception occurred Remaining program"
+        },
+        {
+            id : 23,
+            question : "ADO.NET provides the ability to create and process in-memory databases called",
+            options : ["views", "relations", "tables", "datasets"],
+            answer : "views"
+        },
+        {
+            id : 24,
+            question : `How will you complete the foreach loop in the C#.NET code snippet given below such that it correctly prints all elements of the array a?
+<pre class="language-java"><code>  
+int[][]a = new int[2][];
+a[0] = new int[4]{6, 1 ,4, 3};
+a[1] = new int[3]{9, 2, 7}; 
+foreach (int[ ] i in a)
+{
+    /* Add loop here */
+    Console.Write(j + " ");
+    Console.WriteLine(); 
+}
+</code></pre>`,
+            options : ["foreach (int j = 1; j < a(0).GetUpperBound; j++)", 
+            "foreach (int j = 1; j < a(0).GetUpperBound; j++)", 
+            "foreach (int j in a.Length)", 
+            "foreach (int j in i)"],
+            answer : "foreach (int j in i)"
+        },
+        {
+            id : 25,
+            question : `Which of the following is the correct output of the C#.NET code snippet given below?
+<pre class="language-java"><code>  
+int[][] a = new int[2][];
+a[0] = new int[4]{6, 1, 4, 3};
+a[1] = new int[3]{9, 2, 7}; 
+Console.WriteLine(a[1].GetUpperBound(0));
+</code></pre>`,
+            options : ["4", "7", "9", "2"],
+            answer : "2"
+        },
+        {
+            id : 26,
+            question : "What is true about viewbag in mvc?",
+            options : ["It is used to transfer temporary data from the controller to the view.", 
+            "ViewBag only transfers data from controller to view.", 
+            "ViewBag values will be null if redirection occurs.", 
+            "All of the above"],
+            answer : "All of the above"
+        },
+        {
+            id : 27,
+            question : "How to check Request coming from which controller using MVC ASP.Net?",
+            options : [`var _controller = HttpContext.Current.Request.RequestContext.Values["Controller"].ToString();`, 
+            `var _controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();`, 
+            `var _controller = RouteData.Values["Controller"].ToString();`, 
+            "none"],
+            answer : `var _controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();`
+        },
+        {
+            id : 28,
+            question : "Which Namespace is used for Razor View Engine ?",
+            options : ["System.Web.Razor", "System.Web.Mvc.WebFormViewEngine", "Both of the above", "None"],
+            answer : "System.Web.Razor"
+        },
+        {
+            id : 29,
+            question : "What are the methods used in thread class?",
+            options : ["join", "resume", "sleep", "All of the above"],
+            answer : "All of the above"
+        },
+        {
+            id : 30,
+            question : "What executable unit gets created when we build an ASP.Net application?",
+            options : [".com", ".exe", ".dll", "none of these"],
+            answer : ".dll"
+        },
+        {
+            id : 31,
+            question : "How do we Delete, Update, Select data in a Dataset?",
+            options : ["Using SQLCommand", "Using SQLDataReader", 
+            "Using SQLDataAdapter", "None of these"],
+            answer : "Using SQLDataAdapter"
+        },
+        {
+            id : 32,
+            question : "What is the transport protocol used to call a webservice?",
+            options : ["SMTP", "TCP", "SOAP", "HTTP"],
+            answer : "SOAP"
+        },
+        {
+            id : 33,
+            question : "______ is a code that consists of CPU and platform-independent set of instructions, which can be easily converted to native code.",
+            options : ["JIT", "FCL", "DLL", "MSIL"],
+            answer : "MSIL"
+        },
+        {
+            id : 34,
+            question : "Which of the following .NET components can be used to remove unused references from the managed heap?",
+            options : ["CLR", "Class Loader", "Garbage Collector", "None of the above"],
+            answer : "Garbage Collector"
+        },
+        {
+            id : 35,
+            question : "Which webserver is developed by Microsoft?",
+            options : ["Caudium", "Internet Information Services (IIS)", "Apache Tomcat", "WEBrick"],
+            answer : "Internet Information Services (IIS)"
+        },
+        {
+            id : 36,
+            question : "Which commands are used to specify settings of an .aspx file?",
+            options : ["Directives", "Class", "Validation", "Events"],
+            answer : "Directives"
+        },
+        {
+            id : 37,
+            question : "In ASP.NET application DLL files are stored in_____________",
+            options : ["App_Data", "App_LocalResources", "App_Code", "Bin"],
+            answer : "Bin"
+        },
+        {
+            id : 38,
+            question : "Which method do you invoke on the Data Adapter control to load your generated dataset?",
+            options : ["Fill( )", "Read( )", "ExecuteQuery( )", "None of above"],
+            answer : "Fill( )"
+        },
+        {
+            id : 39,
+            question : "In ASP.NET web application configuration settings are defined in____________",
+            options : ["machine.config", "System.config", "ProcompiledApp.config", "Web.config"],
+            answer : "Web.config"
+        },
+        {
+            id : 40,
+            question : "Which is not a validation control?",
+            options : ["Required Field Validator", "Compare Validator", "Error Validator", "Regular Expression Validator"],
+            answer : "Error Validator"
         }
     ]
 }
