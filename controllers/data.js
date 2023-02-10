@@ -5437,6 +5437,366 @@ main()
             answer : "interrupt"
         }
     ]
+},
+{
+    moduleName : "Object Oriented Programming with Java - test 3",
+    questions : [
+        {
+            id : 1,
+            question : `Which of the following are legal lines of Java code? <br>
+            1. int w = (int)888.8; <br>
+            2. byte x = (byte)100L; <br>
+            3. long y = (byte)100; <br>
+            4. byte z = (byte)100L;`,
+            options : ["1 and 2", "2 and 3", "3 and 4", "All statements are correct"],
+            answer : "All statements are correct"
+        },
+        {
+            id : 2,
+            question : `What is the output of this program?
+<pre class="language-java"><code>
+class average {
+    public static void main(String args[])
+    {
+        double num[] = {5.5, 10.1, 11, 12.8, 56.9, 2.5};
+        double result;
+        result = 0;
+        for (int i = 0; i < 6; ++i)
+        result = result + num[i];
+        System.out.print(result/6);
+    }
+}
+</code></pre>`,
+            options : ["16.34", "16.566666644", "16.46666666666667", "16.46666666666666"],
+            answer : "16.46666666666667"
+        },
+        {
+            id : 3,
+            question : "What is Truncation is Java?",
+            options : ["Floating-point value assigned to an integer type", 
+            "Integer value assigned to floating type", 
+            "Floating-point value assigned to an Floating type", 
+            "Integer value assigned to floating type"],
+            answer : "Floating-point value assigned to an integer type"
+        },
+        {
+            id : 4,
+            question : "Which of these is an incorrect array declaration?",
+            options : ["int arr[] = new int[5];", "int [] arr = new int[5];", 
+            "int arr[] = new int[5];", "int arr[] = int [5] new;"],
+            answer : "int arr[] = int [5] new;"
+        },
+        {
+            id : 5,
+            question : "What will this code print? <br> int arr[] = new int[5]; <br> System.out.println(arr);",
+            options : ["0", "value stored in arr[0]", "00000", "Class name@ hashcode in hexadecimal form"],
+            answer : "Class name@ hashcode in hexadecimal form"
+        },
+        {
+            id : 6,
+            question : `What is the output of this program?
+<pre class="language-java"><code>
+class increment
+{
+    public static void main(String args[])
+    {
+        double var1 = 1 + 5;
+        double var2 = var1 / 4;
+        int var3 = 1 + 5;
+        int var4 = var3 / 4;
+        System.out.print(var2 + " " + var4);
+    }
+}
+</code></pre>`,
+            options : ["1 1", "0 1", "1.5 1", "1.5 1.0"],
+            answer : "1.5 1"
+        },
+        {
+            id : 7,
+            question : "Which of the following methods is not used while Serialization and DeSerialization?",
+            options : ["readObject()", "readExternal()", "readWriteObject()", "writeObject()"],
+            answer : "readWriteObject()"
+        },
+        {
+            id : 8,
+            question : "Which of these keywords are used for generating an exception manually?",
+            options : ["try", "catch", "throw", "check"],
+            answer : "throw"
+        },
+        {
+            id : 9,
+            question : `What is the output of this program?
+<pre class="language-java"><code>
+class Output
+{
+    public static void main(String args[])
+    {
+        try
+        {
+            int a = 0;
+            int b = 5;
+            int c = b / a;
+            System.out.print("Hello");
+        }
+    }
+}
+</code></pre>`,
+            options : ["Hello", "World", "HelloWorld", "Compilation Error"],
+            answer : "Compilation Error"
+        },
+        {
+            id : 10,
+            question : "Which of these methods is used to print stack trace?",
+            options : ["obtainStackTrace()", "printStackTrace()", "getStackTrace()", "displayStackTrace()"],
+            answer : "printStackTrace()"
+        },
+        {
+            id : 11,
+            question : "Which of these classes is super class of Exception class?",
+            options : ["Throwable", "System", "RunTime", "Class"],
+            answer : "Throwable"
+        },
+        {
+            id : 12,
+            question : `What is the output of this program?
+<pre class="language-java"><code>
+class exception_handling
+{
+    public static void main(String args[])
+    {
+        try
+        {
+            throw new NullPointerException ("Hello");
+            System.out.print("A");
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.print("B");
+        }
+    }
+}
+</code></pre>`,
+            options : ["A", "B", "Compilation Error", "Runtime Error"],
+            answer : "Runtime Error"
+        },
+        {
+            id : 13,
+            question : "Which of these class extend InputStream class?",
+            options : ["ObjectStream", "ObjectInputStream", "ObjectOutput", "ObjectInput"],
+            answer : "ObjectInputStream"
+        },
+        {
+            id : 14,
+            question : "How many methods Serializable has?",
+            options : ["1", "2", "3", "0"],
+            answer : "0"
+        },
+        {
+            id : 15,
+            question : "Which of these is an interface for control over serialization and deserialization?",
+            options : ["Serializable", "Externalization", "FileFilter", "ObjectInput"],
+            answer : "Externalization"
+        },
+        {
+            id : 16,
+            question : "Which of these methods of a Thread class is used to suspend a thread for a period of time?",
+            options : ["sleep()", "terminate()", "suspend()", "stop()"],
+            answer : "sleep()"
+        },
+        {
+            id : 17,
+            question : `What is the output of this program?
+<pre class="language-java"><code>
+class newthread implements Runnable
+{
+    Thread t;
+    newthread()
+    {
+        t = new Thread(this,"My Thread");
+        t.start();
+    }
+}
+
+class multithreaded_programing
+{
+    public static void main(String args[])
+    {
+    new newthread();
+    }
+}
+            </code></pre>`,
+            options : ["My Thread", "Thread[My Thread,5,main]", "Compilation Error", "Runtime Error"],
+            answer : "My Thread"
+        },
+        {
+            id : 18,
+            question : "Which of these methods returns the class of an object?",
+            options : ["getClass()", "Class()", "WhoseClass()", "WhoseObject()"],
+            answer : "getClass()"
+        },
+        {
+            id : 19,
+            question : "Which of these class is a superclass of all other classes?",
+            options : ["Math", "Process", "System", "Object"],
+            answer : "Object"
+        },
+        {
+            id : 20,
+            question : `What is the output of this program?
+<pre class="language-java"><code>
+class Output
+{
+    public static void main(String args[])
+    {
+        int x = 3.14;
+        int y = (int) Math.abs(x);
+        System.out.print(y);
+    }
+}
+</code></pre>`,
+            options : ["0", "3", "3.0", "3.1"],
+            answer : "3"
+        },
+        {
+            id : 21,
+            question : "Which of these method can set the out stream to OutputStream?",
+            options : ["setStream()", "setosteam()", "setOut()", "streamtoOstream()"],
+            answer : "setOut()"
+        },
+        {
+            id : 22,
+            question : "Which of these class is not a member class of java.io package?",
+            options : ["String", "StringReader", "Writer", "File"],
+            answer : "String"
+        },
+        {
+            id : 23,
+            question : "Which of these interface is not a member of java.io package?",
+            options : ["DataInput", "ObjectInput", "ObjectFilter", "FileFilter"],
+            answer : "ObjectFilter"
+        },
+        {
+            id : 24,
+            question : "Which of these exceptions will be thrown if we declare an array with negative size?",
+            options : ["IllegalArrayException", "IllegalArraySizeExeption", "NegativeArrayException", "NegativeArraySizeExeption"],
+            answer : "NegativeArraySizeExeption"
+        },
+        {
+            id : 25,
+            question : "Which of these class is used to create user defined exception?",
+            options : ["java.lang", "Exception", "RunTime", "System"],
+            answer : "Exception"
+        },
+        {
+            id : 26,
+            question : "Which of these is the interface of legacy is implemented by Hashtable and Dictionary classes?",
+            options : ["Map", "Enumeration", "HashMap", "Hashtable"],
+            answer : "Map"
+        },
+        {
+            id : 27,
+            question : "Which of these methods is used to retrieve the elements in properties object at specific location?",
+            options : ["get()", "Elementat()", "ElementAt()", "getProperty()"],
+            answer : "getProperty()"
+        },
+        {
+            id : 28,
+            question : `What is the output of this program?
+<pre class="language-java"><code>
+import java.util.*;
+class properties
+{
+    public static void main(String args[])
+    {
+        Properties obj = new Properties();
+        obj.put("AB", new Integer(3));
+        obj.put("BC", new Integer(2));
+        obj.put("CD", new Integer(8));
+        System.out.print(obj.keySet());
+    }
+}
+</code></pre>`,
+            options : ["{AB, BC, CD}", "[AB, BC, CD]", "[3, 2, 8]", "{3, 2, 8}"],
+            answer : "[AB, BC, CD]"
+        },
+        {
+            id : 29,
+            question : "Which of these packages contain all the collection classes?",
+            options : ["java.util", "java.lang", "java.net", "java.awt"],
+            answer : "java.util"
+        },
+        {
+            id : 30,
+            question : "What is Collection in Java?",
+            options : ["A group of objects", "A group of classes", "A group of interfaces", "None of the mentioned"],
+            answer : "A group of objects"
+        },
+        {
+            id : 31,
+            question : "In order to restrict a variable of a class from inheriting to subclass, how variable should be declared?",
+            options : ["Protected", "Private", "Public", "Static"],
+            answer : "Private"
+        },
+        {
+            id : 32,
+            question : "If super class and subclass have same variable name, which keyword should be used to use super class?",
+            options : ["super", "this", "upper", "classname"],
+            answer : "super"
+        },
+        {
+            id : 33,
+            question : "Which of the following is used for implementing inheritance through class?",
+            options : ["inherited", "using", "extends", "implements"],
+            answer : "extends"
+        },
+        {
+            id : 34,
+            question : "What is use of interpreter?",
+            options : ["They read high level code and execute them", "They convert bytecode to machine language code", 
+            "They are intermediate between JIT and JVM", "It is a synonym for JIT"],
+            answer : "They read high level code and execute them"
+        },
+        {
+            id : 35,
+            question : "Which concept of Java is a way of converting real world objects in terms of class?",
+            options : ["Polymorphism", "Encapsulation", "Abstraction", "Inheritance"],
+            answer : "Abstraction"
+        },
+        {
+            id : 36,
+            question : "What is it called if an object has its own lifecycle and there is no owner?",
+            options : ["Aggregation", "Composition", "Encapsulation", "Association"],
+            answer : "Association"
+        },
+        {
+            id : 37,
+            question : "Attribute of an Object is also known as its ________.",
+            options : ["state", "method", "behavior", "procedures"],
+            answer : "state"
+        },
+        {
+            id : 38,
+            question : "Which dynamic class is threadsafe?",
+            options : ["Vector", "ArrayList", "Linkedlist", "None of these"],
+            answer : "Vector"
+        },
+        {
+            id : 39,
+            question : "Which statement is true? Select the one correct answer.",
+            options : ["The compiler will fail to compile code that explicitly tries to call the finalize() method.", 
+            "An overriding finalize() method in any class can always throws checked exceptions.", 
+            "The finalize method() can be overloading.", 
+            "The body of the finalize() method can only access other objects that are eligible for garbage collection."],
+            answer : "The finalize method() can be overloading."
+        },
+        {
+            id : 40,
+            question : "Which of the following are true about the Error and Exception classes?",
+            options : ["Both classes extends Throwable.", "The error class is final and the exception class is not.", 
+            "The exception class is final and the error class is not.", "Both class implement Throwable."],
+            answer : "Both classes extends Throwable."
+        }
+    ]
 }
 ]
 
