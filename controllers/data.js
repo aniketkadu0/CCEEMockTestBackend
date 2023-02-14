@@ -5797,6 +5797,286 @@ class properties
             answer : "Both classes extends Throwable."
         }
     ]
+},
+{
+    moduleName : "Microsoft .Net Technologies - test 3",
+    questions : [
+        {
+            id : 1,
+            question : "Which of the following is used to overload user defined types by defining static member functions?",
+            options : ["op", "opoverload", "operator", "operatoroverload"],
+            answer : "operator"
+        },
+        {
+            id : 2,
+            question : "Operators that can be overloaded are?",
+            options : ["||", "+=", "+", "[]"],
+            answer : "+"
+        },
+        {
+            id : 3,
+            question : "What is the vector in operator overloading?",
+            options : ["class", "method()", "data type", "none of the mentioned"],
+            answer : "data type"
+        },
+        {
+            id : 4,
+            question : "what is Operator Overloading?",
+            options : ["Enables user-defined operator implementations for various operators such as: =, typeof", 
+            "The ability to declare more than one method with the same name but a different signature", 
+            "Enables user-defined operator implementations for various operators such as: true, false", 
+            "none of these"],
+            answer : "Enables user-defined operator implementations for various operators such as: true, false"
+        },
+        {
+            id : 5,
+            question : "Which of the following is NOT an interface declared in System.Collections namespace?",
+            options : ["IComparer", "lEnumerable", "lEnumerator", "IDictionaryComparer"],
+            answer : "IDictionaryComparer"
+        },
+        {
+            id : 6,
+            question : "Suppose value of the Capacity property of ArrayList Collection is set to What will be the capacity of the Collection on adding fifth element to it?",
+            options : ["4", "8", "16", "32"],
+            answer : "8"
+        },
+        {
+            id : 7,
+            question : "Which of the following is the correct way to find out the number of elements currently present in an ArrayList Collection called arr?",
+            options : ["arr.Count", "arr.GrowSize", "arr.MaxIndex", "arr.Capacity"],
+            answer : "arr.Count"
+        },
+        {
+            id : 8,
+            question : "The ... method removes and returns the object at the begining of the Queue.",
+            options : ["public virtual void Dequeue();", 
+            "public virtual void Delete();", 
+            "public virtual void Clear();", 
+            "public virtual object DequeueQ;"],
+            answer : "public virtual object DequeueQ;"
+        },
+        {
+            id : 9,
+            question : "Which Property we can use to gets or sets the number of elements that the ArrayList can Contain",
+            options : ["Count", "Item", "Capacity", "Length"],
+            answer : "Capacity"
+        },
+        {
+            id : 10,
+            question : "Among the given collections which is the I/O index based?",
+            options : ["ArrayList", "BitArray", "Both of the above", "Queue"],
+            answer : "Both of the above"
+        },
+        {
+            id : 11,
+            question : "Choose the correct statement among the followings?",
+            options : ["Indexers are location indicators", " Indexers are used to access class objects", 
+            "Indexer is a form of property and works in the same way as a property", "All of the mentioned"],
+            answer : "All of the mentioned"
+        },
+        {
+            id : 12,
+            question : "Choose the keyword which declares the indexer?",
+            options : ["base", "this", "super", "extract"],
+            answer : "this"
+        },
+        {
+            id : 13,
+            question : "Choose the operator/operators which is/are not used to access the operator in indexers?",
+            options : ["get", "set", "access", "all of the mentioned"],
+            answer : "access"
+        },
+        {
+            id : 14,
+            question : "Which among the following are the advantages of using indexers?",
+            options : ["To use collection of items at a large scale we make use of indexers as they utilize objects of class that represent the collection as an array", 
+            "Indexers are also convenient as they can also make use of different types of indexers like int, string etc", 
+            "An indexer allows an object to be indexed such as an array", 
+            "All of the mentioned"],
+            answer : "All of the mentioned"
+        },
+        {
+            id : 15,
+            question : "Choose the correct statement about properties describing the indexers?",
+            options : ["No need to use the name of the property while using an indexed propert", 
+            "An indexer property should accept at least one argumen", 
+            "Indexers can be overloaded", 
+            "All of the mentioned"],
+            answer : "All of the mentioned"
+        },
+        {
+            id : 16,
+            question : "Choose the correct option among the following indexers which correctly allows to index in same way as an array?",
+            options : ["A class", "An interface", "A function", "A property"],
+            answer : "A class"
+        },
+        {
+            id : 17,
+            question : "Select the modifiers which can be used with the properties?",
+            options : ["Private", "Public", "Protected Internal", "All of the mentioned"],
+            answer : "All of the mentioned"
+        },
+        {
+            id : 18,
+            question : "To use the .NET Framework Data Provider for SQL Server, an application must reference thenamespace.",
+            options : ["System.Data.Client", "System.Data.SqlClient", "System.Data.Sql", "None of the mentioned"],
+            answer : "System.Data.SqlClient"
+        },
+        {
+            id : 19,
+            question : "Choose the namespace which supports multithreading programming?",
+            options : ["System.net", "System.Linq", "System.Threading", "All of the mentioned"],
+            answer : "System.Threading"
+        },
+        {
+            id : 20,
+            question : "What does the following C# code snippet specify? public Thread(ThreadStart start)",
+            options : ["Defines a thread", "Declaration of a thread constructor", "Only Defines a thread", "Only Defines a thread & Declaration of a thread constructor"],
+            answer : "Only Defines a thread & Declaration of a thread constructor"
+        },
+        {
+            id : 21,
+            question : "Which of these classes is used to make a thread?",
+            options : ["String", "System", "Thread", "Runnable"],
+            answer : "Thread"
+        },
+        {
+            id : 22,
+            question : "On call of which type of method the new created thread will not start executing?",
+            options : ["Begin()", "Start()", "New()", "All of the mentioned"],
+            answer : "Start()"
+        },
+        {
+            id : 23,
+            question : "Which of these methods of Thread class is used to Suspend a thread for a period of time?",
+            options : ["sleep()", "terminate()", "suspend()", "stop()"],
+            answer : "sleep()"
+        },
+        {
+            id : 24,
+            question : "Which keyword is used for using the synchronization features defined by the Monitor class?",
+            options : ["lock", "synchronized", "monitor", "locked"],
+            answer : "lock"
+        },
+        {
+            id : 25,
+            question : "Which of these keywords are used to implement synchronization? ",
+            options : ["synchronize", "syn", "synch", "synchronized"],
+            answer : "synchronized"
+        },
+        {
+            id : 26,
+            question : "Which method is called when a thread is blocked from running temporarily?",
+            options : ["Pulse()", "PulseAll()", "Wait()", "Both first and second"],
+            answer : ""
+        },
+        {
+            id : 27,
+            question : "Which of these class is used to make a thread?",
+            options : ["String", "System", "Thread", "Runnable"],
+            answer : "Thread"
+        },
+        {
+            id : 28,
+            question : "Which of these method of Thread class is used to Suspend a thread for a period of time?",
+            options : ["sleep()", "terminate()", "suspend()", "stop()"],
+            answer : "sleep()"
+        },
+        {
+            id : 29,
+            question : `what will be the output of following code?
+<pre class="language-java"><code>
+public static void Main()
+{
+    int k;
+    display(k);
+}
+
+static void display(int val = 0)
+{
+    Console.Write(val);
+}
+</code></pre>`,
+            options : ["Null", "0", "compile time error", "runtime error"],
+            answer : "compile time error"
+        },
+        {
+            id : 30,
+            question : "Which of the following statements is correct about a delegate?",
+            options : ["inheritance is a prerequisite for using delegates", 
+            "delegates are not type safe", 
+            "delegates provides wrappers for function pointers", 
+            "none of the mentioned"],
+            answer : "delegates provides wrappers for function pointers"
+        },
+        {
+            id : 31,
+            question : "The infrastructure that supports these dynamic operations at run time iso called the",
+            options : ["CLR", "CTS", "CLS", "DLR"],
+            answer : "DLR"
+        },
+        {
+            id : 32,
+            question : "In C#, having unreachable code is always a/an ........",
+            options : ["method", "function", "error", "itreative"],
+            answer : "error"
+        },
+        {
+            id : 33,
+            question : "C# treats the multiple catch statements like cases in a .............. statement",
+            options : ["if", "for", "while", "switch"],
+            answer : "switch"
+        },
+        {
+            id : 34,
+            question : "Which component in Aso.net MVC can be used to pass data between controller to view (Assume you have to pass current date and time)",
+            options : [`ViewData["DateTime"] = DateTime.Now.ToString();`, 
+            `ViewBag["DateTime"] = DateTime.Now.ToString();`, 
+            `ViewState["DateTime"] = DateTime.Now.ToString();`,
+            `DataView["DateTime"] = DateTime.Now.ToString();`],
+            answer : `ViewBag["DateTime"] = DateTime.Now.ToString();`
+        },
+        {
+            id : 35,
+            question : "Choose the correct statement among the followings?",
+            options : ["Indexers are location indicators", "Indexers are used to access class objects", 
+            "Indexer is a form of property and works in the same way as a property", 
+            "All of the mentioned"],
+            answer : "All of the mentioned"
+        },
+        {
+            id : 36,
+            question : `State whether the following statements about the Microsoft Intermediate Language (MSIL) are TRUE or FALSE. <br>
+            i) The MSIL code includes instructions to load, initialize and invoke methods on objects <br>
+            ii) The MSIL code is collected and assembled in the form of byte codes and is converted to a .NET assembly`,
+            options : ["i-True, ii-False", "i-False, ii-True", "i-True, ii-True", "i-False, ii-False"],
+            answer : "i-True, ii-True"
+        },
+        {
+            id : 37,
+            question : "What function modifier can be put on a method in a base class to allow the child to override it?",
+            options : ["Abstarct", "Sealed", "Virtual", "Must Override"],
+            answer : "Virtual"
+        },
+        {
+            id : 38,
+            question : "ensures complete interoperability among applications, regardless of the language used to create the application",
+            options : ["CLR", "CTS", "CLS", "FCL"],
+            answer : "CLS"
+        },
+        {
+            id : 39,
+            question : "How do vou manage_states in an ASP.NET application?",
+            options : ["Viewstate", "Application Objects", "Session Objects", "All of the above"],
+            answer : "All of the above"
+        },
+        {
+            id : 40,
+            question : "Choose the base class for string() method:",
+            options : ["System.Array", "System.char", "System.String", "None of the mentioned"],
+            answer : "System.String"
+        }
+    ]
 }
 ]
 
