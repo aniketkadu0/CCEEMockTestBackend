@@ -11,6 +11,9 @@ const {
   registerValidation,
   loginValidation,
 } = require("../middleware/validation");
+
+const { addlog } = require("../service/logger");
+
 const JWT_KEY = process.env.JWT_KEY;
 
 exports.signUp = async (req, res, next) => {
@@ -25,12 +28,32 @@ exports.signUp = async (req, res, next) => {
     const newUser = await createUserObj(req);
     const savedUser = await User.create(newUser);
     req.user = savedUser;
-    next()
+    next();
+
+    addlog({
+      eventType: "0",
+      userId: req.body.email,
+      description: "User created successfully!",
+      callStack: "controllers/userController/signUp",
+      functionName: "signUp",
+      moduleName: "cceestudy",
+      machineName: "https://red-violet-sockeye-fez.cyclic.app",
+    });
+
     return res
       .status(200)
       .send({ message: "User created successfully!", user: savedUser });
   } catch (err) {
-    return res.status(400).send({ message : "User not created", error: err });
+    addlog({
+      eventType: "1",
+      userId: req.body.email,
+      description: "User not created",
+      callStack: "controllers/userController/signUp",
+      functionName: "signUp",
+      moduleName: "cceestudy",
+      machineName: "https://red-violet-sockeye-fez.cyclic.app",
+    });
+    return res.status(400).send({ message: "User not created", error: err });
   }
 };
 
@@ -40,24 +63,55 @@ exports.logIn = async (req, res) => {
   if (error) return res.status(400).send(error.details[0].message);
 
   const foundUser = await User.findOne({ email: req.body.email }); //returns the first document that matches the query criteria or null
-  if (!foundUser)
+  if (!foundUser) {
+    addlog({
+      eventType: "2",
+      userId: req.body.email,
+      description: "Invalid username",
+      callStack: "controllers/userController/logIn",
+      functionName: "logIn",
+      moduleName: "cceestudy",
+      machineName: "https://red-violet-sockeye-fez.cyclic.app",
+    });
     return res.status(400).send({ message: "invalid login credential" });
+  }
 
   try {
     const isMatch = await bcrypt.compareSync(
       req.body.password,
       foundUser.password
     );
-    if (!isMatch)
+    if (!isMatch) {
+      addlog({
+        eventType: "3",
+        userId: req.body.email,
+        description: "Invalid password",
+        callStack: "controllers/userController/logIn",
+        functionName: "logIn",
+        moduleName: "cceestudy",
+        machineName: "https://red-violet-sockeye-fez.cyclic.app",
+      });
       return res.status(400).send({ message: "invalid login credential" });
+    }
 
     // create and assign jwt
-    const token = await jwt.sign({ _id: foundUser._id, role : foundUser.role }, JWT_KEY);
-
+    const token = await jwt.sign(
+      { _id: foundUser._id, role: foundUser.role },
+      JWT_KEY
+    );
+    addlog({
+      eventType: "4",
+      userId: req.body.email,
+      description: "Logged in successfully",
+      callStack: "controllers/userController/logIn",
+      functionName: "logIn",
+      moduleName: "cceestudy",
+      machineName: "https://red-violet-sockeye-fez.cyclic.app",
+    });
     return res
       .status(200)
       .header("authtoken", token)
-      .send({ "authtoken": token, userId: foundUser._id , foundUser});
+      .send({ authtoken: token, userId: foundUser._id, foundUser });
   } catch (error) {
     return res.status(400).send(error);
   }
@@ -77,27 +131,42 @@ exports.getAllUsers = async (req, res) => {
 exports.getUser = async (req, res) => {
   try {
     const foundUser = await User.findOne({ _id: req.user._id });
-    res.send(foundUser)
+    res.send(foundUser);
   } catch (error) {
-    return res
-      .status(400)
-      .send({ error: "Unable to find user" });
+    return res.status(400).send({ error: "Unable to find user" });
   }
 };
 
 exports.updateUser = async (req, res) => {
   try {
-    const updatedUser = await User.findByIdAndUpdate(
-      req.user._id,
-      { 'paymentStatus' : true} 
-    );
+    const updatedUser = await User.findByIdAndUpdate(req.user._id, {
+      paymentStatus: true,
+    });
     if (!updatedUser) {
       return res.status(400).send({ message: "Could not update user" });
     }
+    addlog({
+      eventType: "5",
+      userId: updatedUser.email,
+      description: "Payment status updated successfully",
+      callStack: "controllers/userController/updateUser",
+      functionName: "updateUser",
+      moduleName: "cceestudy",
+      machineName: "https://red-violet-sockeye-fez.cyclic.app",
+    });
     return res
       .status(200)
       .send({ message: "User updated successfully", updatedUser });
   } catch (error) {
+    addlog({
+      eventType: "6",
+      userId: req.body.email,
+      description: "Payment status not updated",
+      callStack: "controllers/userController/updateUser",
+      functionName: "updateUser",
+      moduleName: "cceestudy",
+      machineName: "https://red-violet-sockeye-fez.cyclic.app",
+    });
     return res
       .status(400)
       .send({ error: "An error has occurred, unable to update user" });
@@ -106,17 +175,14 @@ exports.updateUser = async (req, res) => {
 
 exports.verify = async (req, res) => {
   try {
-    const updatedUser = await User.findByIdAndUpdate(
-      req.query.id,
-      {'verified' : true} 
-    );
+    const updatedUser = await User.findByIdAndUpdate(req.query.id, {
+      verified: true,
+    });
     if (!updatedUser) {
       return res.status(400).send({ message: "Could not update user" });
     }
-    return res
-      .status(200)
-      .redirect('https://cceestudy.online/emailverified')
-      // .send({ message: "Email verified successfully", updatedUser });
+    return res.status(200).redirect("https://cceestudy.online/emailverified");
+    // .send({ message: "Email verified successfully", updatedUser });
   } catch (error) {
     return res
       .status(400)
@@ -128,11 +194,9 @@ exports.deleteUser = async (req, res) => {
   try {
     const deletedUser = await User.findByIdAndDelete(req.params.userId);
     if (!deletedUser) {
-      return res
-        .status(400)
-        .send({
-          message: "could not delete user, seems like a database issue",
-        });
+      return res.status(400).send({
+        message: "could not delete user, seems like a database issue",
+      });
     } else {
       return res.status(200).send({ message: "user deleted successfully!" });
     }
@@ -151,8 +215,8 @@ const createUserObj = async (req) => {
   return {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    centreName : req.body.centreName,
+    centreName: req.body.centreName,
     email: req.body.email,
-    password: bcrypt.hashSync(req.body.password, 10)
+    password: bcrypt.hashSync(req.body.password, 10),
   };
 };
