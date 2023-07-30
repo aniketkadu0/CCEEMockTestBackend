@@ -31,7 +31,7 @@ exports.getQuestions = async (req, res) => {
     // });
     addlog({
       eventType: "7",
-      userId: req.user.email,
+      userId: "",
       description: "Got the questions for : " + req.query.moduleName,
       callStack: "controllers/testController/getQuestions",
       functionName: "getQuestions",
@@ -42,7 +42,7 @@ exports.getQuestions = async (req, res) => {
   } catch (error) {
     addlog({
       eventType: "8",
-      userId: req.user.email,
+      userId: "",
       description: "Unable to find quetions",
       callStack: "controllers/testController/getQuestions",
       functionName: "getQuestions",
@@ -80,7 +80,7 @@ exports.addTest = async (req, res, next) => {
   } catch (error) {
     addlog({
       eventType: "10",
-      userId: updatedUser.email,
+      userId: req.user.email,
       description: "An error has occurred, unable to add test with results",
       callStack: "controllers/testController/addTest",
       functionName: "addTest",
@@ -113,7 +113,7 @@ exports.getAttemptedTest = async (req, res) => {
   } catch (error) {
     addlog({
       eventType: "12",
-      userId: foundUser.email,
+      userId: req.user.email,
       description: "Unable to find tests",
       callStack: "controllers/testController/getAttemptedTest",
       functionName: "getAttemptedTest",
@@ -130,7 +130,7 @@ exports.getModules = async (req, res) => {
     if (!Module) {
       addlog({
         eventType: "13",
-        userId: req.user.email,
+        userId: "",
         description: "Modules not found",
         callStack: "controllers/testController/getModules",
         functionName: "getModules",
@@ -141,7 +141,7 @@ exports.getModules = async (req, res) => {
     } else {
       addlog({
         eventType: "14",
-        userId: req.user.email,
+        userId: "",
         description: "Got the modules name",
         callStack: "controllers/testController/getModules",
         functionName: "getAttemptedTest",
@@ -153,7 +153,7 @@ exports.getModules = async (req, res) => {
   } catch (error) {
     addlog({
       eventType: "15",
-      userId: req.user.email,
+      userId: "",
       description: "Error",
       callStack: "controllers/testController/getModules",
       functionName: "getModules",
