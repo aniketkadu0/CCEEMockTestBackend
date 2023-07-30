@@ -17,7 +17,7 @@ exports.addQuestions = async (req, res, next) => {
       .status(200)
       .send({ message: "Test added successfully!", Test: savedTest });
   } catch (err) {
-    return res.status(400).send({ message: "Test not created", error: err });
+    return res.status(500).send({ message: "Test not created", error: err });
   }
 };
 
@@ -38,7 +38,7 @@ exports.getQuestions = async (req, res) => {
       moduleName: "cceestudy",
       machineName: "https://red-violet-sockeye-fez.cyclic.app",
     });
-    res.send(foundQuestions);
+    res.status(200).send(foundQuestions);
   } catch (error) {
     addlog({
       eventType: "8",
@@ -49,7 +49,7 @@ exports.getQuestions = async (req, res) => {
       moduleName: "cceestudy",
       machineName: "https://red-violet-sockeye-fez.cyclic.app",
     });
-    return res.status(400).send({ error: "Unable to find quetions" });
+    return res.status(500).send({ error: "Unable to find quetions" });
   }
 };
 
@@ -61,7 +61,7 @@ exports.addTest = async (req, res, next) => {
       { new: true }
     );
     if (!updatedUser) {
-      return res.status(400).send({ message: "User not found" });
+      return res.status(500).send({ message: "User not found" });
     } else {
       addlog({
         eventType: "9",
@@ -88,7 +88,7 @@ exports.addTest = async (req, res, next) => {
       machineName: "https://red-violet-sockeye-fez.cyclic.app",
     });
     return res
-      .status(400)
+      .status(500)
       .send({ error: "An error has occurred, unable to update user" });
   }
 };
@@ -108,7 +108,7 @@ exports.getAttemptedTest = async (req, res) => {
         moduleName: "cceestudy",
         machineName: "https://red-violet-sockeye-fez.cyclic.app",
       });
-      res.send(foundUser.tests);
+      res.status(200).send(foundUser.tests);
     }
   } catch (error) {
     addlog({
@@ -120,19 +120,47 @@ exports.getAttemptedTest = async (req, res) => {
       moduleName: "cceestudy",
       machineName: "https://red-violet-sockeye-fez.cyclic.app",
     });
-    return res.status(400).send({ error: "Unable to find tests" });
+    return res.status(500).send({ error: "Unable to find tests" });
   }
 };
 
 exports.getModules = async (req, res) => {
   try {
     const Module = await Modules.find();
-    res.send(Module[0].modules);
     if (!Module) {
-      return res.status(400).send({ message: "Modules not found" });
+      addlog({
+        eventType: "13",
+        userId: req.user.email,
+        description: "Modules not found",
+        callStack: "controllers/testController/getModules",
+        functionName: "getModules",
+        moduleName: "cceestudy",
+        machineName: "https://red-violet-sockeye-fez.cyclic.app",
+      });
+      return res.status(500).send({ message: "Modules not found" });
+    } else {
+      addlog({
+        eventType: "14",
+        userId: req.user.email,
+        description: "Got the modules name",
+        callStack: "controllers/testController/getModules",
+        functionName: "getAttemptedTest",
+        moduleName: "cceestudy",
+        machineName: "https://red-violet-sockeye-fez.cyclic.app",
+      });
+      res.status(200).send(Module[0].modules);
     }
   } catch (error) {
-    return res.status(400).send({ error: "Unable to find Modules" });
+    addlog({
+      eventType: "15",
+      userId: req.user.email,
+      description: "Error",
+      callStack: "controllers/testController/getModules",
+      functionName: "getModules",
+      moduleName: "cceestudy",
+      machineName: "https://red-violet-sockeye-fez.cyclic.app",
+    });
+    return res.status(500).send({ error: "Unable to find Modules" });
   }
 };
 

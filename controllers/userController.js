@@ -22,7 +22,7 @@ exports.signUp = async (req, res, next) => {
 
   const emailExist = await User.findOne({ email: req.body.email }); //returns the first document that matches the query criteria or null
   if (emailExist)
-    return res.status(400).send({ message: "Email already exists!" });
+    return res.status(500).send({ message: "Email already exists!" });
 
   try {
     const newUser = await createUserObj(req);
@@ -53,14 +53,14 @@ exports.signUp = async (req, res, next) => {
       moduleName: "cceestudy",
       machineName: "https://red-violet-sockeye-fez.cyclic.app",
     });
-    return res.status(400).send({ message: "User not created", error: err });
+    return res.status(500).send({ message: "User not created", error: err });
   }
 };
 
 // login
 exports.logIn = async (req, res) => {
   const { error } = loginValidation(req.body);
-  if (error) return res.status(400).send(error.details[0].message);
+  if (error) return res.status(500).send(error.details[0].message);
 
   const foundUser = await User.findOne({ email: req.body.email }); //returns the first document that matches the query criteria or null
   if (!foundUser) {
@@ -73,7 +73,7 @@ exports.logIn = async (req, res) => {
       moduleName: "cceestudy",
       machineName: "https://red-violet-sockeye-fez.cyclic.app",
     });
-    return res.status(400).send({ message: "invalid login credential" });
+    return res.status(500).send({ message: "invalid login credential" });
   }
 
   try {
@@ -91,7 +91,7 @@ exports.logIn = async (req, res) => {
         moduleName: "cceestudy",
         machineName: "https://red-violet-sockeye-fez.cyclic.app",
       });
-      return res.status(400).send({ message: "invalid login credential" });
+      return res.status(500).send({ message: "invalid login credential" });
     }
 
     // create and assign jwt
@@ -113,14 +113,14 @@ exports.logIn = async (req, res) => {
       .header("authtoken", token)
       .send({ authtoken: token, userId: foundUser._id, foundUser });
   } catch (error) {
-    return res.status(400).send(error);
+    return res.status(500).send(error);
   }
 };
 
 exports.getAllUsers = async (req, res) => {
   const allUsers = await User.find({});
   if (!allUsers) {
-    res.status(400).send({ error: "no users found" });
+    res.status(500).send({ error: "no users found" });
   } else {
     return res
       .status(200)
@@ -133,7 +133,7 @@ exports.getUser = async (req, res) => {
     const foundUser = await User.findOne({ _id: req.user._id });
     res.send(foundUser);
   } catch (error) {
-    return res.status(400).send({ error: "Unable to find user" });
+    return res.status(500).send({ error: "Unable to find user" });
   }
 };
 
@@ -143,7 +143,7 @@ exports.updateUser = async (req, res) => {
       paymentStatus: true,
     });
     if (!updatedUser) {
-      return res.status(400).send({ message: "Could not update user" });
+      return res.status(500).send({ message: "Could not update user" });
     }
     addlog({
       eventType: "5",
@@ -168,7 +168,7 @@ exports.updateUser = async (req, res) => {
       machineName: "https://red-violet-sockeye-fez.cyclic.app",
     });
     return res
-      .status(400)
+      .status(500)
       .send({ error: "An error has occurred, unable to update user" });
   }
 };
@@ -179,13 +179,13 @@ exports.verify = async (req, res) => {
       verified: true,
     });
     if (!updatedUser) {
-      return res.status(400).send({ message: "Could not update user" });
+      return res.status(500).send({ message: "Could not update user" });
     }
     return res.status(200).redirect("https://cceestudy.online/emailverified");
     // .send({ message: "Email verified successfully", updatedUser });
   } catch (error) {
     return res
-      .status(400)
+      .status(500)
       .send({ error: "An error has occurred, unable to update user" });
   }
 };
@@ -194,7 +194,7 @@ exports.deleteUser = async (req, res) => {
   try {
     const deletedUser = await User.findByIdAndDelete(req.params.userId);
     if (!deletedUser) {
-      return res.status(400).send({
+      return res.status(500).send({
         message: "could not delete user, seems like a database issue",
       });
     } else {
@@ -202,7 +202,7 @@ exports.deleteUser = async (req, res) => {
     }
   } catch (error) {
     return res
-      .status(400)
+      .status(500)
       .send({ error: "an error occured, unable to delete user" });
   }
 };
