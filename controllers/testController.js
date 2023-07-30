@@ -7,6 +7,8 @@ if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
 
+const { addlog } = require("../service/logger");
+
 exports.addQuestions = async (req, res, next) => {
   try {
     const newTest = await createTestObj(req);
