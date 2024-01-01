@@ -141,6 +141,7 @@ exports.updateUser = async (req, res) => {
   try {
     const updatedUser = await User.findByIdAndUpdate(req.user._id, {
       paymentStatus: true,
+      expired: false,
     });
     if (!updatedUser) {
       return res.status(500).send({ message: "Could not update user" });
