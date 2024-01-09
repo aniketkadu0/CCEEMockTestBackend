@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "undefined/subscriptions/71e5d3ed-ac9e-44c4-9043-d0b49359ae52/resourceGroups/AzureDeploySample20240106201355ResourceGroup/providers/Microsoft.Web/sites/cceemocktestbackend",
+  "appService.deploySubpath": "."
+}
