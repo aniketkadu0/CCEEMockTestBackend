@@ -137,6 +137,56 @@ exports.getUser = async (req, res) => {
   }
 };
 
+exports.getUserStatus = async (req, res) => {
+  try {
+    const foundUser = await User.findOne({ email: req.params.email });
+    if (!foundUser) {
+      res.status(500).send({ error: "no user found" });
+    } else {
+      res.status(200).send(foundUser);
+    }
+  } catch (error) {
+    return res.status(500).send({ error: "Unable to find user" });
+  }
+};
+
+exports.updatePaymentStatus = async (req, res) => {
+  try {
+    const updatedUser = await User.findByIdAndUpdate(req.params.id, {
+      paymentStatus: true,
+      expired: false,
+    });
+    if (!updatedUser) {
+      return res.status(500).send({ message: "Could not update user" });
+    }
+    addlog({
+      eventType: "5",
+      userId: updatedUser.email,
+      description: "Payment status updated successfully",
+      callStack: "controllers/userController/updateUser",
+      functionName: "updateUser",
+      moduleName: "cceestudy",
+      machineName: "https://red-violet-sockeye-fez.cyclic.app",
+    });
+    return res
+      .status(200)
+      .send({ message: "User updated successfully", updatedUser });
+  } catch (error) {
+    addlog({
+      eventType: "6",
+      userId: req.body.email,
+      description: "Payment status not updated",
+      callStack: "controllers/userController/updateUser",
+      functionName: "updateUser",
+      moduleName: "cceestudy",
+      machineName: "https://red-violet-sockeye-fez.cyclic.app",
+    });
+    return res
+      .status(500)
+      .send({ error: "An error has occurred, unable to update user" });
+  }
+};
+
 exports.updateUser = async (req, res) => {
   try {
     const updatedUser = await User.findByIdAndUpdate(req.user._id, {
