@@ -118,7 +118,17 @@ exports.logIn = async (req, res) => {
 };
 
 exports.getAllUsers = async (req, res) => {
-  const allUsers = await User.find({});
+  const allUsers = await User.find(
+    {},
+    {
+      firstName: 1,
+      lastName: 1,
+      paymentStatus: 1,
+      expired: 1,
+      createdAt: 1,
+      updatedAt: 1,
+    }
+  );
   if (!allUsers) {
     res.status(500).send({ error: "no users found" });
   } else {
