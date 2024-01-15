@@ -123,6 +123,7 @@ exports.getAllUsers = async (req, res) => {
     {
       firstName: 1,
       lastName: 1,
+      email: 1,
       paymentStatus: 1,
       expired: 1,
       createdAt: 1,
